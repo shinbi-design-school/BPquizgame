@@ -13,7 +13,6 @@ import cc.shinbi.java.model.Const;
 import cc.shinbi.java.model.entity.User;
 
 
-
 //ユーザーのデータアクセスオブジェクトに関するクラス
 public class UserDAO extends DAO<User> {
 	public UserDAO(Connection connection) 
@@ -124,5 +123,46 @@ public class UserDAO extends DAO<User> {
 		}
 		return user;
 	}
+	
+	//指定したユーザーの情報を変更する処理
+		public User updateUser(int id, String account, String name, boolean isAdmin)
+		         throws SQLException {
+			
+			String sql = "UPDATE users SET account = ?, name = ?, is_admin = ? WHERE id = ?";
+			
+			PreparedStatement statement = this.connection.prepareStatement(sql);
+			statement.setString(1, account);
+			statement.setString(2, name);
+			statement.setBoolean(3, isAdmin);
+			statement.setInt(4, id);
+			
+			statement.execute();
+			statement.close();
+			
+			User user = this.findById(id);
+			return user;
+		}
+		
+		
+		//指定したユーザーのパスワードを変更する処理
+		public User updatePassword(int id, String password)
+		         throws SQLException, NoSuchAlgorithmException {
+			
+			User user = this.findById(id);
+			String salt = user.getSalt();
+			String hash = UserDAO.createHash(password, salt, Const.PEPPER);
+			
+			String sql = "UPDATE users SET password = ? WHERE id = ?";
+			
+			PreparedStatement statement = this.connection.prepareStatement(sql);
+			statement.setString(1, hash);
+			statement.setInt(2, id);
+			
+			statement.execute();
+			statement.close();
+			
+			user = this.findById(id);
+			return user;
+		}
 }
 	
