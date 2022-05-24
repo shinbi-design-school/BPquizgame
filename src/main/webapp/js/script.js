@@ -20,3 +20,9 @@ function deleteUser(id) {
 		$('#user_form').submit();
 	}
 }
+
+//クイズの新規作成に関する処理
+function addQuiz() {
+	$('#operation_quiz').val('new');
+	$('#quiz_form').submit();
+}
