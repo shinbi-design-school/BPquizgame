@@ -26,3 +26,20 @@ function addQuiz() {
 	$('#operation_quiz').val('new');
 	$('#quiz_form').submit();
 }
+
+//クイズの削除に関する処理
+function deleteQuiz(id) {
+	var ret = confirm('ユーザーを削除してもよろしいですか？');
+	if(ret) {
+		$('#operation_quiz').val('delete');
+		$('#quiz_id_input').val(id);
+		$('#quiz_form').submit();
+	}
+}
+
+//ユーザーの編集に関する処理
+function editQuiz(id) {
+	$('#operation_quiz').val('edit');
+	$('#quiz_id_input').val(id);
+	$('#quiz_form').submit();
+}

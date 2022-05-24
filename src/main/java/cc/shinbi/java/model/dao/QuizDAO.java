@@ -39,8 +39,6 @@ public class QuizDAO extends DAO<Quiz> {
 				String choices2,String choices3, String choices4, String answer,
 				String explanation, String genre) throws SQLException {
 			
-			Quiz quiz = new Quiz();
-			
 			String sql = "INSERT INTO quizs (question, choices1,"
 					+ "choices2, choices3, choices4, answer,"
 					+ "explanation, genre) "
@@ -60,7 +58,7 @@ public class QuizDAO extends DAO<Quiz> {
 			statement.execute();
 			statement.close();
 			
-		//	Quiz quiz = this.findNew();
+			Quiz quiz = this.findNew();
 			return quiz;
 		}
 		
@@ -70,7 +68,7 @@ public class QuizDAO extends DAO<Quiz> {
 				String explanation, String genre) throws SQLException {
 			
 			String sql = "UPDATE quizs SET question = ?, choices1 = ?, choices2 = ?, "
-					+ "choices3 = ?. choices4 = ?, answer = ?, explanation = ?,"
+					+ "choices3 = ?, choices4 = ?, answer = ?, explanation = ?,"
 					+ "genre = ? WHERE id = ?";
 			
 			PreparedStatement statement = this.connection.prepareStatement(sql);

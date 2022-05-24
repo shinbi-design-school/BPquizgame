@@ -24,6 +24,7 @@
       <h1>クイズ一覧</h1>
       
        <form id="quiz_form" action="postquiz" method="post">
+            <input type="hidden" id="quiz_id_input" name="id" value="">
             <input type="hidden" id="operation_quiz" name="operation" value="">
        </form>
       
@@ -45,10 +46,10 @@
             <tr>
                <td><%= quiz.getQuestion() %></td>
                <td>
-                  <a href="javascript:editUser(<%= quiz.getId() %>)">
+                  <a href="javascript:editQuiz(<%= quiz.getId() %>)">
                      <span class="icon fas fa-pencil-alt"></span>
                   </a>
-                  <a href="javascript:deleteUser(<%= quiz.getId() %>)">
+                  <a href="javascript:deleteQuiz(<%= quiz.getId() %>)">
                      <span class="icon far fa-trash-alt"></span>
                   </a>
                </td>
