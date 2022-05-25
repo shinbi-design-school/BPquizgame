@@ -8,13 +8,13 @@
 <html>
 <head><title>タイムオーバー</title></head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style4.css">
+<link rel="stylesheet" type="text/css" href="style4.css">
 <body>
 
 <p class="bounce-top"></p>
 
 <a class="next"><br/>次に進む場合は、ボタンを押してください。</a>
-<form action="${pageContext.request.contextPath}/QuizResult" method="get">
+<form action="http://localhost:8080/BPquizgame/QuizResult" method="get">
 	<button class="bt" name="over" value="over">次に進む</button>
 	<br/>
 	<br/>
@@ -23,7 +23,7 @@
 </form>
 
 <br/><br/>
-<a href="${pageContext.request.contextPath}/starttest.jsp">戻る</a><br>
+<a href="http://localhost:8080/BPquizgame/starttest.jsp">戻る</a><br>
 
 </body>
 <footer>
