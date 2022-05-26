@@ -138,7 +138,7 @@
 			</connections>
 			<display>false</display>
 			<creation_date>2022-05-17 13:42:46</creation_date>
-			<updated_date>2022-05-25 10:42:16</updated_date>
+			<updated_date>2022-05-26 00:20:15</updated_date>
 			<model_property>
 				<name>プロジェクト名</name>
 				<value></value>
@@ -704,7 +704,7 @@
 			<option></option>
 			<columns>
 				<normal_column>
-					<word_id>12</word_id>
+					<word_id>11</word_id>
 					<id>0</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -872,7 +872,7 @@
 			<option></option>
 			<columns>
 				<normal_column>
-					<word_id>11</word_id>
+					<word_id>12</word_id>
 					<id>4</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
