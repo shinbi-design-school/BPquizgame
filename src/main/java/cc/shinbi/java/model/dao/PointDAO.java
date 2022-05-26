@@ -40,7 +40,7 @@ public class PointDAO extends DAO<Point> {
 	public Point addPoint(int user_id, String name, int score) throws SQLException {
 		Timestamp now = new Timestamp(System.currentTimeMillis());
 		
-		String sql = "INSERT INTO scores (user_id, name, score, created_at) "
+		String sql = "INSERT INTO points (user_id, name, score, created_at) "
 		           + "VALUES(?, ?, ?, ?)";
 		
 	    PreparedStatement statement = this.connection.prepareStatement(sql);
@@ -63,8 +63,7 @@ public class PointDAO extends DAO<Point> {
 		List<Point> list = new ArrayList<Point>();
 				
 		//結合が必要なくなったらsql文変をかえる
-		String sql = "SELECT * FROM scores INNER JOIN users ON "
-				+ "scores.user_id = users.id ORDER BY score DESC LIMIT 10";
+		String sql = "SELECT * FROM points order BY  score DESC LIMIT 10";
 				
 		Statement statement = this.connection.createStatement();
 		ResultSet resultSet = statement.executeQuery(sql);

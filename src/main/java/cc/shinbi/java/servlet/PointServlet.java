@@ -66,6 +66,7 @@ public class PointServlet extends JspServlet{
 	
 	
 	//登録したレコードの順番を取得するメソッドを呼び出す
+
 	
 	
 	
