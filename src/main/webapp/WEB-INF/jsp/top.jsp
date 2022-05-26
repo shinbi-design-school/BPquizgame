@@ -22,7 +22,15 @@
     <body>
       <jsp:include page="header.jsp" />
       <main>
-         トップページ
+      	<div style="text-align: center;">
+         トップページ<br/><br/>
+         ゲームをスタートする場合は、以下のボタンを押してください。<br/>
+		<form action="${pageContext.request.contextPath}/QuizResult" method="get">
+		<button class="start" name="start" value="start">ゲームスタート</button>
+		</form>
+		</div>
+
+         
       </main>
       <jsp:include page="footer.jsp" />
    </body>

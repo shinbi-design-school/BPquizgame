@@ -138,7 +138,11 @@
 			</connections>
 			<display>false</display>
 			<creation_date>2022-05-17 13:42:46</creation_date>
+<<<<<<< HEAD
 			<updated_date>2022-05-26 10:47:55</updated_date>
+=======
+			<updated_date>2022-05-25 10:42:16</updated_date>
+>>>>>>> branch 'master' of git@github.com:shinbi-design-school/BPquizgame.git
 			<model_property>
 				<name>プロジェクト名</name>
 				<value></value>
@@ -698,8 +702,13 @@
 			<option></option>
 			<columns>
 				<normal_column>
+<<<<<<< HEAD
 					<word_id>10</word_id>
 					<id>0</id>
+=======
+					<word_id>11</word_id>
+					<id>4</id>
+>>>>>>> branch 'master' of git@github.com:shinbi-design-school/BPquizgame.git
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -931,8 +940,13 @@
 			<option></option>
 			<columns>
 				<normal_column>
+<<<<<<< HEAD
 					<word_id>12</word_id>
 					<id>6</id>
+=======
+					<word_id>13</word_id>
+					<id>10</id>
+>>>>>>> branch 'master' of git@github.com:shinbi-design-school/BPquizgame.git
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>

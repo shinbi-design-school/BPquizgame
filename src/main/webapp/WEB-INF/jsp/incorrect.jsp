@@ -1,0 +1,70 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+<%
+  float answertime = (float)session.getAttribute("answertime");
+%>
+
+
+ <%
+ answertime = answertime / 1000;
+ %>
+
+    
+<!DOCTYPE html>
+<html>
+<head><title>クイズ回答結果</title></head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style3.css">
+<body style="background: url(${pageContext.request.contextPath}/css/背景2.png);">
+<div id="img" class="stamp2 poyon" ></div>
+<div style="text-align: center;">
+
+<p class="judge TextTyping">・・・   残念！はずれです   ・・・</p>
+<p class="judge2 TextTyping">回答にかかった時間は<%= answertime %>secです。</p>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+次に進む場合は、ボタンを押してください。<br/><br/>
+<form action="${pageContext.request.contextPath}/QuizResult" method="get">
+	<button class="next" name="next" value="next">次に進む</button>
+
+</form>
+
+
+<br/><br/><br/><br/>
+<a href="${pageContext.request.contextPath}/starttest.jsp">戻る</a><br>
+</div>
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="${pageContext.request.contextPath}/js/8-10.js"></script>
+</body>
+<footer>
+ 
+ <script>
+ 'use strict';
+ 
+ <%--ID値「img」に対してCSSアニメ―ション「poyon」を300ミリ秒の間隔を空けてループ再生--%>
+ looopAnimation("img", "poyon", 300);
+
+ 
+<%--ページを後戻りさせない処理--%>
+history.pushState(null, null, null);
+window.addEventListener('popstate', function(e) {
+  history.pushState(null, null, null);
+});
+
+
+
+ </script>
+ </footer>
+</html>
