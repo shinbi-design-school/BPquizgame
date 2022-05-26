@@ -14,6 +14,8 @@
 <div id="menu"> 
          <a class="menuItem" href="top">ホーム</a>
          
+         <a class="menuItem" href="point">ランキング</a>
+         
          <a class="menuItem" href="postquiz">クイズ投稿</a>
 <%
     if(user.isAdmin()) {

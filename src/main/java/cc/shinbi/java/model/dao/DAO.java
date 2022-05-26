@@ -66,7 +66,7 @@ public abstract class DAO<T> {
 		return entity;
 	}
 		
-		//ユーザー一覧を取得する処理
+		//レコード一覧を取得する処理
 		public List<T> findAll() throws SQLException {
 			List<T> list = new ArrayList<T>();
 			
@@ -90,7 +90,7 @@ public abstract class DAO<T> {
 		}
 		
 		
-		//IDからユーザーの取得をする処理
+		//IDからレコードを取得をする処理
 		public T findById(int id) throws SQLException {
 			T entity = null;
 			

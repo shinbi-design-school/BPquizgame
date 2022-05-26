@@ -3,11 +3,13 @@ package cc.shinbi.java.model.entity;
 import java.sql.Timestamp;
 
 //スコア情報に関するクラス
-public class Score {
+public class Point {
 	//スコアID
 	private int id;
 	//ユーザーのID
 	private int userId;
+	//ユーザーの名前
+	private String name;
 	//スコア
 	private int score;
 	//記録した時間
@@ -29,6 +31,14 @@ public class Score {
 	
 	public void setUserId(int userId) {
 		this.userId = userId;
+	}
+	
+    public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 	public int getScore() {

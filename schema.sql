@@ -3,8 +3,8 @@ SET SESSION FOREIGN_KEY_CHECKS=0;
 /* Drop Tables */
 
 DROP TABLE IF EXISTS img_quizs;
+DROP TABLE IF EXISTS points;
 DROP TABLE IF EXISTS quizs;
-DROP TABLE IF EXISTS scores;
 DROP TABLE IF EXISTS users;
 
 
@@ -30,6 +30,17 @@ CREATE TABLE img_quizs
 );
 
 
+CREATE TABLE points
+(
+	id int NOT NULL AUTO_INCREMENT,
+	user_id int NOT NULL,
+	name varchar(32) NOT NULL,
+	score int NOT NULL,
+	created_at timestamp NOT NULL,
+	PRIMARY KEY (id)
+);
+
+
 CREATE TABLE quizs
 (
 	id int NOT NULL AUTO_INCREMENT,
@@ -41,16 +52,6 @@ CREATE TABLE quizs
 	answer varchar(64) NOT NULL,
 	explanation varchar(256) NOT NULL,
 	genre varchar(64) NOT NULL,
-	PRIMARY KEY (id)
-);
-
-
-CREATE TABLE scores
-(
-	id int NOT NULL AUTO_INCREMENT,
-	user_id int NOT NULL,
-	score int NOT NULL,
-	created_at timestamp NOT NULL,
 	PRIMARY KEY (id)
 );
 
@@ -71,7 +72,7 @@ CREATE TABLE users
 
 /* Create Foreign Keys */
 
-ALTER TABLE scores
+ALTER TABLE points
 	ADD FOREIGN KEY (user_id)
 	REFERENCES users (id)
 	ON UPDATE RESTRICT
