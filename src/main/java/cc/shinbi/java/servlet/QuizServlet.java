@@ -61,7 +61,7 @@ public class QuizServlet extends JspServlet{
 		
 	    //jspがnullの時の処理
 		if(jsp == null) {
-			jsp = getList(request, loginUser, dao);
+			jsp = this.getList(request, loginUser, dao);
 		}
 		return jsp;
 	}
@@ -174,7 +174,7 @@ public class QuizServlet extends JspServlet{
      		error = "ジャンルを入力してください。";
 		}
    
-        //エラーじゃなかったらuserDAOのaddQuizメソッド（SQL実行）を呼び出してクイズ一覧ぺージに戻る
+        //エラーじゃなかったらquizDAOのaddQuizメソッド（SQL実行）を呼び出してクイズ一覧ぺージに戻る
 	    if(error.isEmpty()) {
            	dao.addQuiz(question, choices1, choices2, choices3, choices4, 
            			answer, explanation, genre);
