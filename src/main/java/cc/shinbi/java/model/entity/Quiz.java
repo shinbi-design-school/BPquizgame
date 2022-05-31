@@ -17,7 +17,7 @@ public class Quiz {
 	//答えの説明
 	private String explanation;
 	//クイズのジャンル
-	private String gener;
+	private String genre;//Gener→Genreに修正（小田）
 	
 	
 	//getter&setter
@@ -85,11 +85,11 @@ public class Quiz {
 		this.explanation = explanation;
 	}
 	
-	public String getGener() {
-		return gener;
+	public String getGenre() {//Gener→Genreに修正（小田）
+		return genre;//Gener→Genreに修正 （小田）
 	}
 	
-	public void setGener(String gener) {
-		this.gener = gener;
+	public void setGenre(String genre) {//Gener→Genreに修正（小田）
+		this.genre = genre;//Gener→Genreに修正（小田）
 	}
 }

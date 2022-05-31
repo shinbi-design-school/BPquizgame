@@ -72,6 +72,7 @@ public class QuizServlet extends JspServlet{
 		         throws Exception {
 			String jsp = null;
 			
+			
 //			if(user.isAdmin()) {
 				List<Quiz> quizs = dao.findAll();
 				request.setAttribute("quizs", quizs);

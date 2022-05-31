@@ -28,7 +28,7 @@ public class QuizDAO extends DAO<Quiz> {
 			quiz.setChoices4(resultSet.getString("choices4"));
 			quiz.setAnswer(resultSet.getString("answer"));
 			quiz.setExplanation(resultSet.getString("explanation"));
-			quiz.setGener(resultSet.getString("genre"));
+			quiz.setGenre(resultSet.getString("genre"));//setGener→setGenreに修正（小田）
 			
 			return quiz;
 		}
