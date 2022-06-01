@@ -62,8 +62,7 @@ public class PointDAO extends DAO<Point> {
 	public List<Point> findRanking() throws SQLException {
 		List<Point> list = new ArrayList<Point>();
 				
-		//結合が必要なくなったらsql文変をかえる
-		String sql = "SELECT * FROM points order BY  score DESC LIMIT 10";
+		String sql = "SELECT * FROM points order BY score DESC LIMIT 10";
 				
 		Statement statement = this.connection.createStatement();
 		ResultSet resultSet = statement.executeQuery(sql);
@@ -79,4 +78,27 @@ public class PointDAO extends DAO<Point> {
 		return list;
 	}
 	
+	//レコードのscoreが上から何番目か表示する
+	public int myRank(int score) throws SQLException {
+		int rank = 0;
+		//自分のscoreより上にレコードがいくつあるか
+	 	String sql = "SELECT COUNT(score) FROM points WHERE score > ?";
+	    
+		PreparedStatement statement = this.connection.prepareStatement(sql);
+		
+	    statement.setInt(1, score);
+		
+		ResultSet resultSet = statement.executeQuery();
+
+		if(resultSet.next()) {
+			rank =  resultSet.getInt(1);
+		}
+   
+		statement.execute();
+		statement.close();
+		
+		rank++;
+		
+		return rank;
+	}	
 }
