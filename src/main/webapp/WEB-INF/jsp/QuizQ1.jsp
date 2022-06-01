@@ -2,45 +2,15 @@
     pageEncoding="UTF-8"%>
     
     <%
-    int i = (int)session.getAttribute("i");
+    String question = (String)session.getAttribute("question");//QuizQuestion1から質問を受け取るためセッションに接続
+	String choices1 = (String)session.getAttribute("choices1");//QuizQuestion1から回答1を受け取るためセッションに接続
+	String choices2 = (String)session.getAttribute("choices2");//QuizQuestion1から回答2を受け取るためセッションに接続
+	String choices3 = (String)session.getAttribute("choices3");//QuizQuestion1から回答3を受け取るためセッションに接続
+	String choices4 = (String)session.getAttribute("choices4");//QuizQuestion1から回答4を受け取るためセッションに接続
+
     %>
     
-    <%
-    
-    String str[][] = {
-    		{"問題1 大島さんが好きな季節は？",
-				"1.春","2.夏","3.秋","4.冬","2"
-			},
-			{"問題2 砂岡さんが好きな色は？",
-				"1.白","2.赤","3.黒","4.青","3"
-			},
-			{"問題3 坪井さんが好きな動物は？",
-				"1.犬","2.猫","3.馬","4.羊","1"
-			},
-			{"問題4 小田さんが好きな地域は？",
-				"1.春","2.夏","3.秋","4.冬","4"
-			},
-			{"問題5 田中先生が好きな季節は？",
-				"1.春","2.夏","3.秋","4.冬","2"
-			}}; 
-    
-    
-    String question = (str[i][0]);
-    String answer1 = (str[i][1]);
-    String answer2 = (str[i][2]);
-    String answer3 = (str[i][3]); 
-    String answer4 = (str[i][4]); 
-    String correct= (str[i][5]); 
-    
-%>
-      
-
  
-  
- <% 
- String str2 = str[i][5];
- int in1 = Integer.parseInt(str2);
- %>
   
    
     
@@ -68,20 +38,20 @@
 
         
    <form action="${pageContext.request.contextPath}/QuizQuestion1" method="GET">
-	<input id="Question1" type="hidden" name="Q1" value="Q1"> 
+	<%--<input id="Question1" type="hidden" name="Q1" value="Q1">--%> 
 	
 	
 <div class="container">
-	<button class="box fadeUp btn btn-flatw" name="1" value="1"><%= answer1 %></button>
-    <button class="delay-time03 box fadeUp btn btn-flat" name="2" value="2"><%= answer2 %></button>
+	<button class="box fadeUp btn btn-flatw" name="1" value="1"><%= choices1 %></button>
+    <button class="delay-time03 box fadeUp btn btn-flat" name="2" value="2"><%= choices2 %></button>
     <audio id="sound" preload="auto">
     <source src="nc97718.mp3" type="audio/mp3">
     </audio>
 
 </div>
 <div class="container">
-    <button class="delay-time02 box fadeUp btn btn-flat" name="3" value="3"><%= answer3 %></button>
-    <button class="delay-time04 box fadeUp btn btn-flat" name="4" value="4"><%= answer4 %></button>
+    <button class="delay-time02 box fadeUp btn btn-flat" name="3" value="3"><%= choices3 %></button>
+    <button class="delay-time04 box fadeUp btn btn-flat" name="4" value="4"><%= choices4 %></button>
 </div>  	
     </form>
 <section>

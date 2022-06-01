@@ -19,7 +19,7 @@
    String choices4 = quiz.getChoices4();
    String answer = quiz.getAnswer();
    String explanation = quiz.getExplanation();
-   String genre = quiz.getGener();
+   String genre = quiz.getGenre();
 %>
     
 <!DOCTYPE html>

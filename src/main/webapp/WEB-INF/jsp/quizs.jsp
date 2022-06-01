@@ -7,7 +7,7 @@
 <%@ page import="cc.shinbi.java.model.entity.Quiz" %>
 
 <%
-   List<Quiz> quizs = (List<Quiz>)request.getAttribute("quizs");
+   List<Quiz> quizs = (List<Quiz>)request.getAttribute("quizs"); 
    String error = (String)request.getAttribute("error");
 %>
 
