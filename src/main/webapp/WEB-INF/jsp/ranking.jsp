@@ -10,6 +10,7 @@
    List<Point> points = (List<Point>)request.getAttribute("points");
    String error = (String)request.getAttribute("error");
    User user = (User)request.getAttribute("user") ;
+   int i = 1;
 %>
 
 
@@ -26,6 +27,7 @@
        
        <table id="users">
             <tr>
+               <th>順位</th>
                <th>名前</th>
                <th>得点</th>
                <th>日付</th>
@@ -34,11 +36,13 @@
    for(Point point : points) {
 %>
             <tr>
+               <td><%= i %>位</td>
                <td><%= point.getName() %>
                <td><%= point.getScore() %></td>
                <td><%= point.getCreatedAt() %>
             </tr>
 <%
+   i++;
    }
 %> 
          </table>
