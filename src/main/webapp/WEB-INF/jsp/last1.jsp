@@ -16,16 +16,16 @@
 <meta charset="utf-8">
 <title>結果画面</title>
 
-<link rel="stylesheet" href="body.css">
+<link rel="stylesheet" href="last body.css">
 
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/1.css">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/slowly.css">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/3.css">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/5-8.css">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/reset.css">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/delay.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/last 1.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/last slowly.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/last 3.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/last 5-8.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/last reset.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/last delay.css">
 
 </head>
 
