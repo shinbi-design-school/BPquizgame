@@ -54,7 +54,7 @@
                 <tr>
                     <th>クイズジャンル</th>
                     <td><input type="text" name="genre"></td>
-                </tr>
+                </tr>90
 
                 <tr>
                     <td>
