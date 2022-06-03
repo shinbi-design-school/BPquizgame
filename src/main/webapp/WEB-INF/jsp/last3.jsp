@@ -1,11 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
- <%
+<%
 	int tokutentotal = (int) session.getAttribute("tokutentotal"); 
 	int count = (int) session.getAttribute("count");
-	int rank = (int) request.getAttribute("rank"); 
 %>
+
+<%--	
+	int rank = (int) request.getAttribute("rank"); 
+--%>
   
 <%
 	int rate = count/5*100;
@@ -40,18 +43,18 @@
     <div id="wrapper">
   
 
-  <p><span class="blurTrigger"><img src="${pageContext.request.contextPath}がんばりましょう.png" width="300" height="300"> <br/> 
+  <p><span class="blurTrigger"><img src="${pageContext.request.contextPath}/がんばりましょう.png" width="300" height="300"> <br/> 
  
   
   </span>
   </p>
 
 <div class="text-align:center">
-  <div class="box fadeUp">正解得点合計<%= count %>点</div>
+  <div class="box fadeUp">正解得点合計<%= count*10 %>点</div>
   <div class="delay-time01 box fadeUp">残り時間ボーナス<%= tokutentotal %>点</div>
   <div class="delay-time02 box fadeUp">総合得点<%= totalresult %>点</div>
-  <div class="delay-time03 box fadeUp">あなたのランキングは<%= rank %>位</div>
-  <button type="button">戻る</button>
+  <div class="delay-time03 box fadeUp">あなたのランキングは<%-- rank --%>位</div>
+   <button type="button" onclick=location.href="${pageContext.request.contextPath}/top">トップページへ戻る</button>
 </div>
 
 <!--/wrapper--></div>

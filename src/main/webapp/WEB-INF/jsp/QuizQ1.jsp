@@ -61,7 +61,7 @@
 </section>
 
 <br/><br/>
-<a href="${pageContext.request.contextPath}/starttest.jsp">戻る</a><br>
+<a href="${pageContext.request.contextPath}/top">戻る</a><br>
 </body>
 
 <footer>
