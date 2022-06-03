@@ -21,6 +21,8 @@ public class PointServlet extends JspServlet{
 		super(true);
 	}
 
+	String operation = null;
+	int totalresult = 0;
 	
 	@Override
 	protected String view(
@@ -28,10 +30,15 @@ public class PointServlet extends JspServlet{
 			HttpServletResponse response,
 			Connection connection,
 			User loginUser) throws Exception {
-		String operation = request.getParameter("operation");
-		String jsp = null;
+		HttpSession session = request.getSession();
 		
+		//String operation = request.getParameter("operation");
+		operation = (String) session.getAttribute("operation");
+		String jsp = null;
+		System.out.println("operation有無2：" + operation);
 		PointDAO dao = new PointDAO(connection);
+		
+		
 		
 		if(operation != null) {
 			//operationに値を入れた状態でリザルト画面に移動する
@@ -55,8 +62,8 @@ public class PointServlet extends JspServlet{
         //formから入力された値を取得 ここにnameを追加
 		int user_id = (int) request.getAttribute("user_id");
 		String name = (String) session.getAttribute("name");
-        int score = (int) session.getAttribute("tokutentotal");
-                                               //tokutentotal？
+        int score = (int) session.getAttribute("totalresult");
+                                               
         
         dao.addPoint(user_id, name, score);
         
@@ -79,12 +86,34 @@ public class PointServlet extends JspServlet{
 		int rank = dao.myRank(point.getScore());
 		//rankに順位をセット
    		request.setAttribute("rank", rank);
+   		
+   		rank = (int) request.getAttribute("rank");
+   		System.out.println("rank有無：" + rank);
+   		
+   		jsp = "/WEB-INF/jsp/ranking.jsp";
+   		
+   		///おだ追加///////////////////////////////////////
+   		//ServletContext sc = getServletContext();  
+   		
+   		if(operation != null && totalresult >= 85) {
+   			//operationに値を入れた状態でリザルト画面に移動する
+   			//operetionに値が入っていたらデータベースに得点を登録して、
+   			//順位が入っているresalut.jspを表示する
+   			//sc.getRequestDispatcher("/WEB-INF/jsp/last1.jsp");
+   			jsp = "/WEB-INF/jsp/last1.jsp";
+   		}else if(operation != null && totalresult >= 55) {
+   			//sc.getRequestDispatcher("/WEB-INF/jsp/last2.jsp");
+   			jsp = "/WEB-INF/jsp/last1.jsp";
+   		}else if(operation != null && totalresult < 55) {
+   			//sc.getRequestDispatcher("/WEB-INF/jsp/last3.jsp");
+   			jsp = "/WEB-INF/jsp/last1.jsp";
+   		}
+   		////////////////////////////////////////////////
 		
-
 		
-		jsp = "/WEB-INF/jsp/ranking.jsp";
 		return jsp;
 		
+
 	}
 
 	
@@ -102,4 +131,27 @@ public class PointServlet extends JspServlet{
 		return jsp;
 	}
 
+
+/*
+	private String rank(
+			HttpServletRequest request,
+			HttpServletResponse response
+		) throws Exception {
+	ServletContext sc = getServletContext();  
+	
+	if(operation != null && totalresult >= 85) {
+		//operationに値を入れた状態でリザルト画面に移動する
+		//operetionに値が入っていたらデータベースに得点を登録して、
+		//順位が入っているresalut.jspを表示する
+		sc.getRequestDispatcher("/WEB-INF/jsp/last1.jsp").forward(request,  response);
+	}else if(operation != null && totalresult >= 55) {
+		sc.getRequestDispatcher("/WEB-INF/jsp/last2.jsp").forward(request,  response);
+	}else if(operation != null && totalresult < 55) {
+		sc.getRequestDispatcher("/WEB-INF/jsp/last3.jsp").forward(request,  response);
+	}
+	return null;
+	}*/
+	
+	
+	
 }

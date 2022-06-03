@@ -38,6 +38,7 @@ public class QuizResult extends JspServlet{
 		    int count = 0;
 		    int tokuten = 0;
 		    int tokutentotal = 0;
+		    int totalresult = 0;
 		   
 		    String start = request.getParameter("start");
 		    String next = request.getParameter("next");
@@ -52,6 +53,7 @@ public class QuizResult extends JspServlet{
 		    	 count = 0;
 		    	 session.setAttribute("count", count);//正解数（count）をリセットしてやる＞＞前の情報が残ると正確に計算できない
 		    	 tokutentotal = 0;
+		    	 totalresult = 0;
 		    	 session.setAttribute("tokutentotal", tokutentotal);//ボーナス得点合計（count）をリセットしてやる＞＞前の情報が残ると正確に計算できない
 		    	 i = 0;
 		    	 session.setAttribute("i", i);//試験問題変数のiをリセットしてやる。
@@ -156,13 +158,13 @@ public class QuizResult extends JspServlet{
 			
 			//結果発表後に次の問題または最終結果（ご褒美画面）への移動処理
 				
-				int totalresult =0;
+			
 				
 				
 				tokutentotal = (int) session.getAttribute("tokutentotal"); 
 				count = (int) session.getAttribute("count");
 				totalresult = (count*10) + tokutentotal; 
-				
+				session.setAttribute("totalresult", totalresult);
 				
 				//サーブレットコンテキストの取得
 				ServletContext sc = getServletContext();  
@@ -174,16 +176,44 @@ public class QuizResult extends JspServlet{
 					//Thread.sleep(300);//ページが開く前にデータ処理時間が必要?
 			    	sc.getRequestDispatcher("/WEB-INF/jsp/QuizQ1.jsp").forward(request,  response);
 				}else if((over != null || next != null) && i == 5 && totalresult >= 85) {
+					String operation = "operation";
+					session.setAttribute("operation", operation);
+					operation = (String) session.getAttribute("operation");
+					System.out.println("operation有無：" + operation);
 			    	//Thread.sleep(300);//ページが開く前にデータ処理時間が必要?
-			    	sc.getRequestDispatcher("/WEB-INF/jsp/totalresulttest1.jsp").forward(request,  response);
+			    	sc.getRequestDispatcher("/WEB-INF/jsp/last1.jsp").forward(request,  response);
+			    	/*
+					String disp = "/point";
+				      RequestDispatcher dispatch = request.getRequestDispatcher(disp);
+				      dispatch.forward(request, response);
+			    	*/
+			    	
 			    }else if((over != null || next != null) && i == 5 && totalresult >= 55) {
-			    	//Thread.sleep(300);//ページが開く前にデータ処理時間が必要?
-			    	sc.getRequestDispatcher("/WEB-INF/jsp/totalresulttest2.jsp").forward(request,  response);
+			    	String operation = "operation";
+					session.setAttribute("operation", operation);
+					operation = (String) session.getAttribute("operation");
+					System.out.println("operation有無：" + operation);
+					//Thread.sleep(300);//ページが開く前にデータ処理時間が必要?
+			    	sc.getRequestDispatcher("/WEB-INF/jsp/last2.jsp").forward(request,  response);
+			    	/*
+			    	String disp = "/point";
+				      RequestDispatcher dispatch = request.getRequestDispatcher(disp);
+				      dispatch.forward(request, response);
+				      */
+				     
 			    }else if((over != null || next != null) && i == 5 && totalresult < 55) {
+			    	String operation = "operation";
+					session.setAttribute("operation", operation);
+					operation = (String) session.getAttribute("operation");
+					System.out.println("operation有無：" + operation);
 			    	//Thread.sleep(300);//ページが開く前にデータ処理時間が必要?
-			    	sc.getRequestDispatcher("/WEB-INF/jsp/totalresulttest3.jsp").forward(request,  response);
+			    	sc.getRequestDispatcher("/WEB-INF/jsp/last3.jsp").forward(request,  response);
+			    	/*
+			    	String disp = "/point";
+				      RequestDispatcher dispatch = request.getRequestDispatcher(disp);
+				      dispatch.forward(request, response);
+				      */
 			    }
-				
 				
 			
 				return null;
