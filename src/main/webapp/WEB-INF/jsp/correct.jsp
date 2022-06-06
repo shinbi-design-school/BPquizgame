@@ -2,10 +2,11 @@
     pageEncoding="UTF-8"%>
     
   
-  <%
-  float answertime = (float)session.getAttribute("answertime");
-  int tokuten = (int)session.getAttribute("tokuten");
- %>
+ <%
+	float answertime = (float)session.getAttribute("answertime");
+  	int tokuten = (int)session.getAttribute("tokuten");
+  	String explanation = (String)session.getAttribute("explanation");
+%>
  
  <%
  answertime = answertime / 1000;
@@ -21,15 +22,14 @@
 
 <p id="img" class="judge TextTyping">！！！  正解です。得点10点を獲得しました！！！</p>
 <p class="judge2 TextTyping">回答にかかった時間は<%= answertime %>secです。</p>
-<p class="judge2 TextTyping">残り時間ボーナス：<%= tokuten %>点が加算されます！</p><br/>
+<p class="judge2 TextTyping">残り時間ボーナス：<%= tokuten %>点が加算されます！</p>
+<p class="judge2 TextTyping">【解説】　<%= explanation %></p>
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-次に進む場合は、ボタンを押してください。<br/><br/>
+<a class="next">次に進む場合は、ボタンを押してください。</a><br/><br/>
 <form action="${pageContext.request.contextPath}/QuizResult" method="get">
-	<button class="next" name="next" value="next">次に進む</button>
+	<button name="next" value="next">次に進む</button>
 </form>
 <div id="img" class="stamp1 poyon" ></div>
 <br/>

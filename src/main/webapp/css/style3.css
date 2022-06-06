@@ -2,7 +2,7 @@
 
 head {
 	min-width: 1000px;
-	height: 50px;
+	height: 40px;
     background: rgb(183, 222, 245);
     background-size: cover;
     background-attachment: fixed;
@@ -10,12 +10,12 @@ head {
 }
 
 .header {
-	margin:10px 0 10px 0;
+	margin: 0;
 	
 }
 
 body {
-	margin-top:20px;
+	margin-top:10px;
     min-width: 1000px;
     background: url(背景.png)center / cover;
     background-size: cover;
@@ -44,13 +44,13 @@ background-color: red;
 .btn,
 a.btn,
 button.btn {
-	margin: 10px;
+	margin: 20px 10px 0px 10px;
 	padding: 100px;
-	height: 130px;
+	height: 120px;
 	width: 100%;
 	box-shadow: 2px 2px 4px;
 
-  font-size: 4rem;
+  font-size: 50px;
   font-weight: 700;
   line-height: 1;
   position: relative;
@@ -138,13 +138,19 @@ opacity: 0;
 
 
 .ribbon20-wrapper { 
-  display: block;
-  position: relative;
+  /*display: block;
+  position: relative;*/
+  display: grid;/*この行と下の行を追加すると範囲内でテキストを中央配置できる（IE11非対応）*/
+  place-items: center;
+  position: block;
   margin: 0 auto;
-  padding: 10px ;
+  padding: 2px 40px 0.5px 40px;
   width: 80%;
-  font-size: 30px;
+  /*min-height: 145px;*/
+  height: 200px;
+  font-size: 35px;
   text-align: center;
+   
    box-shadow: 2px 2px 4px;
    background:#e0ffff;
    border-radius: 1rem;
@@ -195,10 +201,9 @@ opacity: 0;
 
 /*爆弾==================================================*/
 
-
 .bomb{
   position: fixed;
-  top: 58%;
+  top: 420px;
   left: 50%;
 
   display: block;
@@ -462,27 +467,28 @@ opacity: 0;
 
 
 
-/*correc画面t==================================================*/
+/*correct画面==================================================*/
 
 
 .stamp1{
   position: fixed;
-  top:  30%;
-  left: 60% ;
+  top:  43%;
+  left: 63% ;
   background: url(correct.png)center / cover;
+  z-index: 0;
   display: block;
   width:500px;
   height: 500px;
-  z-index: 1;
+  
 }
 
 .word {
-	z-index: 0;
 	font-weight: bold;
 	font-size: 20px;
 	color: white;
 	text-shadow: 1px 2px 3px #808080;
 	transition-delay: 1s;
+	z-index: 4;
 }
 
 .judge {
@@ -490,6 +496,7 @@ opacity: 0;
   	letter-spacing: 0.1em;
   	color: white;
   	text-shadow: 1px 2px 3px #191970;
+  	z-index: 4;
 }
 /*correct画面==================================================*/
 
@@ -499,27 +506,45 @@ opacity: 0;
 
 .stamp2{
   position: fixed;
-  top: 30%;
-  left: 60%;
+  top: 43%;
+  left: 63%;
   background: url(incorrect.png)center / cover;
+  z-index: 0;
   display: block;
   width: 500px;
   height: 500px;
   border-radius: 100%;
+  
 }
 
 .judge2 {
+	z-index: 2;
+	text-align: center;
+	padding: 0 10%;
 	font-size: 30px;
   	letter-spacing: 0.1em;
   	color: white;
   	text-shadow: 1px 2px 3px #191970;
   	transition-delay: 2s;
+  	z-index: 4;
 }
 
 
 /*incorrect画面==================================================*/
 
 /*correct・incorrect画面共有==================================================*/
+
+.next {
+
+	text-align: center;
+	margin: 0 auto;
+  	width: 80%;
+	font-size: 25px;
+  	font-weight: bold;
+  	color: white;
+  	text-shadow: 1px 2px 3px #191970;
+  	z-index: 4;
+}
 
     /* CSSアニメーションの設定 */
     .poyon {
@@ -554,12 +579,14 @@ opacity: 0;
 
 .TextTyping span {
   display: none;
+  z-index: 4;
 }
 
 /*文字列後ろの線の設定*/
 .TextTyping::after {
   content: "|";
   animation: typinganime .8s ease infinite;
+  z-index: 4;
 }
 
 @keyframes typinganime{
@@ -568,3 +595,315 @@ opacity: 0;
 }
 
 /*correct・incorrect画面共有==================================================*/
+
+
+
+
+/*魔理沙、霊夢（クイズ画面）==================================================*/
+
+/*霊夢///////////////////////////////////////////////////*/ 
+    /* CSSアニメーションの設定 */
+    .poyooon1 {
+      -webkit-animation: poyooon1 1.2s linear 0s 9, pururun1 2s linear 9s 1, kirikae1 4s linear forwards 7s /*forwards*/;
+      animation: poyooon1 1.2s linear 0s 9,pururun1 2s linear 9s 1, kirikae1 4s linear forwards 7s /*forwards*/;
+      /*position: fixed;
+      top: 70%;
+      left: 0%;*/
+    }
+    
+    @-webkit-keyframes poyooon1 {
+      0%   { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+      10%  { -webkit-transform: scale(1.1, 0.9) translate(0%, 5%); }
+      40%  { -webkit-transform: scale(1.2, 0.8) translate(0%, 15%); }
+      50%  { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+      60%  { -webkit-transform: scale(0.9, 1.2) translate(0%, -100%); }
+      75%  { -webkit-transform: scale(0.9, 1.2) translate(0%, -20%); }
+      85%  { -webkit-transform: scale(1.2, 0.8) translate(0%, 15%); }
+      100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+    @keyframes poyooon1 {
+      0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
+      10%  { transform: scale(1.1, 0.9) translate(0%, 5%); }
+      40%  { transform: scale(1.2, 0.8) translate(0%, 15%); }
+      50%  { transform: scale(1.0, 1.0) translate(0%, 0%); }
+      60%  { transform: scale(0.9, 1.2) translate(0%, -100%); }
+      75%  { transform: scale(0.9, 1.2) translate(0%, -20%); }
+      85%  { transform: scale(1.2, 0.8) translate(0%, 15%); }
+      100% { transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+    
+    /*
+    .pururun {
+      -webkit-animation: pururun 1.2s linear 0.2s 1;
+      animation: pururun 1.2s linear 0.2s 1;
+      animation-delay: 1000ms;
+    }
+    */
+    @-webkit-keyframes pururun1 {
+      0%   { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+      10%  { -webkit-transform: scale(1.0, 1.0) translate(10%, 0%) skew(-10deg, 0deg); }
+      60%  { -webkit-transform: scale(1.0, 1.0) translate(20%, 0%) skew(-20deg, 0deg); }
+      70%  { -webkit-transform: scale(1.0, 1.0) translate(-15%, 0%) skew(15deg, 0deg); }
+      80%  { -webkit-transform: scale(1.0, 1.0) translate(15%, 0%) skew(-15deg, 0deg); }
+      80%  { -webkit-transform: scale(1.0, 1.0) translate(5%, 0%) skew(-5deg, 0deg); }
+      90%  { -webkit-transform: scale(1.0, 1.0) translate(-5%, 0%) skew(5deg, 0deg); }
+      100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+    @keyframes pururun1 {
+      0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
+      10%  { transform: scale(1.0, 1.0) translate(10%, 0%) skew(-10deg, 0deg); }
+      60%  { transform: scale(1.0, 1.0) translate(20%, 0%) skew(-20deg, 0deg); }
+      70%  { transform: scale(1.0, 1.0) translate(-15%, 0%) skew(15deg, 0deg); }
+      80%  { transform: scale(1.0, 1.0) translate(15%, 0%) skew(-15deg, 0deg); }
+      80%  { transform: scale(1.0, 1.0) translate(5%, 0%) skew(-5deg, 0deg); }
+      90%  { transform: scale(1.0, 1.0) translate(-5%, 0%) skew(5deg, 0deg); }
+      100% { transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+    
+    /*画像切り替え霊夢*/
+
+.change_img1 img:nth-child(1) {
+	      position: fixed;
+      top: 70%;
+      left: 87%;
+  z-index: 2;
+  visibility: visible;
+}
+
+.change_img1 img:nth-child(2) {
+      position: fixed/*absolute*/;
+      top: 70%;
+      left: 87%;
+      
+  -webkit-animation-delay: 9s;
+          animation-delay: 9s;
+          
+  z-index: 0;
+  visibility: hidden;
+}
+
+@-webkit-keyframes kirikae1 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  49% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+@keyframes kirikae1 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  49% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+    
+  /*魔理沙///////////////////////////////////////////////////*/  
+    
+      .poyooon2 {
+      -webkit-animation: poyooon2 1.2s linear 0.5s 9, pururun2 2s linear 9s 1, kirikae2 4s linear forwards 7s /*forwards*/;
+      animation: poyooon2 1.2s linear 0.5s 9,pururun2 2s linear 9s 1, kirikae2 4s linear forwards 7s /*forwards*/;
+      /*animation-delay: 500ms;*/
+      /*position: fixed;
+      top: 70%;
+      left: 87%;*/
+    }
+    
+    
+     @-webkit-keyframes poyooon2 {
+      0%   { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+      10%  { -webkit-transform: scale(1.1, 0.9) translate(0%, 5%); }
+      40%  { -webkit-transform: scale(1.2, 0.8) translate(0%, 15%); }
+      50%  { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+      60%  { -webkit-transform: scale(0.9, 1.2) translate(0%, -100%); }
+      75%  { -webkit-transform: scale(0.9, 1.2) translate(0%, -20%); }
+      85%  { -webkit-transform: scale(1.2, 0.8) translate(0%, 15%); }
+      100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+    @keyframes poyooon2 {
+      0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
+      10%  { transform: scale(1.1, 0.9) translate(0%, 5%); }
+      40%  { transform: scale(1.2, 0.8) translate(0%, 15%); }
+      50%  { transform: scale(1.0, 1.0) translate(0%, 0%); }
+      60%  { transform: scale(0.9, 1.2) translate(0%, -100%); }
+      75%  { transform: scale(0.9, 1.2) translate(0%, -20%); }
+      85%  { transform: scale(1.2, 0.8) translate(0%, 15%); }
+      100% { transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+     @-webkit-keyframes pururun2 {
+      0%   { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+      10%  { -webkit-transform: scale(1.0, 1.0) translate(-10%, 0%) skew(10deg, 0deg); }
+      60%  { -webkit-transform: scale(1.0, 1.0) translate(-20%, 0%) skew(20deg, 0deg); }
+      70%  { -webkit-transform: scale(1.0, 1.0) translate(15%, 0%) skew(-15deg, 0deg); }
+      80%  { -webkit-transform: scale(1.0, 1.0) translate(-15%, 0%) skew(15deg, 0deg); }
+      80%  { -webkit-transform: scale(1.0, 1.0) translate(-5%, 0%) skew(5deg, 0deg); }
+      90%  { -webkit-transform: scale(1.0, 1.0) translate(5%, 0%) skew(-5deg, 0deg); }
+      100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+    @keyframes pururun2 {
+      0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
+      10%  { -webkit-transform: scale(1.0, 1.0) translate(-10%, 0%) skew(10deg, 0deg); }
+      60%  { -webkit-transform: scale(1.0, 1.0) translate(-20%, 0%) skew(20deg, 0deg); }
+      70%  { -webkit-transform: scale(1.0, 1.0) translate(15%, 0%) skew(-15deg, 0deg); }
+      80%  { -webkit-transform: scale(1.0, 1.0) translate(-15%, 0%) skew(15deg, 0deg); }
+      80%  { -webkit-transform: scale(1.0, 1.0) translate(-5%, 0%) skew(5deg, 0deg); }
+      90%  { -webkit-transform: scale(1.0, 1.0) translate(5%, 0%) skew(-5deg, 0deg); }
+      100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+    } 
+ 
+ /*画像切り替え魔理沙*/
+
+.change_img2 img:nth-child(1) {
+	      position: fixed;
+      top: 70%;
+      left: 0%;
+  z-index: 2;
+  visibility: visible;
+}
+
+.change_img2 img:nth-child(2) {
+      position: fixed/*absolute*/;
+      top: 70%;
+      left: 0%;
+      
+  -webkit-animation-delay: 9s;
+          animation-delay: 9s;
+          
+  z-index: 0;
+  visibility: hidden;
+}
+
+@-webkit-keyframes kirikae2 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  49% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+@keyframes kirikae2 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  49% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+
+
+
+
+    /*魔理沙、霊夢吹き出し==================================================*/
+.balloon1 {
+    
+  position: fixed;
+  top: 79%;
+  left: 14%;
+  display: inline-block;
+  margin: 1.5em 0;
+  padding: 20px 20px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 35px;
+  background: #e0edff;
+  border-radius: 15px;
+  box-shadow: 2px 2px 4px;
+  
+}
+
+.balloon1:before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-top: 15px solid #e0edff;
+}
+
+.balloon1 p {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+.balloon2 {
+    
+  position: fixed;
+  top: 79%;
+  right: 13%;
+   display: inline-block;
+  margin: 1.5em 0;
+  padding: 20px 20px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 35px;
+  background: #e0edff;
+  border-radius: 15px;
+  box-shadow: 2px 2px 4px;
+}
+
+.balloon2:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-top: 15px solid #e0edff;
+}
+
+.balloon2 p {
+  margin: 0;
+  padding: 0;
+}
+
+/*魔理沙、霊夢（クイズ画面）==================================================*/

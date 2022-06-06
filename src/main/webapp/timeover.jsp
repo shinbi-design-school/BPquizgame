@@ -1,7 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-
+<%
+	String answer = (String)session.getAttribute("answer");
+	String explanation = (String)session.getAttribute("explanation");
+  	String result = (String)session.getAttribute("result");
+%>
 
     
 <!DOCTYPE html>
@@ -12,10 +16,14 @@
 <body>
 
 <p class="bounce-top"></p>
-
-<a class="next"><br/>次に進む場合は、ボタンを押してください。</a>
+<br/>
+<div class="next">
+<a>正解は ”<%= result %>" でした。</a><br/>
+<a>【解説】　<%= explanation %></a><br/><br/>
+<a>次に進む場合は、ボタンを押してください。</a><br/>
 <form action="${pageContext.request.contextPath}/QuizResult" method="get">
 	<button class="bt" name="over" value="over">次に進む</button>
+	</div>
 	<br/>
 	<br/>
 	<br/>
