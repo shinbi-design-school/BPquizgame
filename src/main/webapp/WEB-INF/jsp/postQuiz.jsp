@@ -45,7 +45,14 @@
                 </tr>
                 <tr>
                     <th>答え</th>
-                    <td><input type="text" name="answer"></td>
+                    <td>  
+                       <select name="answer">
+                          <option value="1">選択肢1</option>
+                          <option value="2">選択肢2</option>
+                          <option value="3">選択肢3</option>
+                          <option value="4">選択肢4</option>
+                       </select>
+                    </td>
                 </tr>
                 <tr>
                     <th>説明</th>
@@ -55,7 +62,6 @@
                     <th>クイズジャンル</th>
                     <td><input type="text" name="genre"></td>
                 </tr>
-
                 <tr>
                     <td>
                         <input id="submit" type="submit" value="クイズを登録">

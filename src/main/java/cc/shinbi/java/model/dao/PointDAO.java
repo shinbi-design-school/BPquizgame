@@ -58,11 +58,12 @@ public class PointDAO extends DAO<Point> {
 	}
 	
 	
-	//10位までのscoreランキングを取得する
+	//scoreランキングを取得する
 	public List<Point> findRanking() throws SQLException {
 		List<Point> list = new ArrayList<Point>();
 				
-		String sql = "SELECT * FROM points order BY score DESC LIMIT 10";
+	    //String sql = "SELECT * FROM points order BY score DESC LIMIT 10";
+		String sql = "SELECT * FROM points order BY score DESC";
 				
 		Statement statement = this.connection.createStatement();
 		ResultSet resultSet = statement.executeQuery(sql);
