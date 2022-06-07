@@ -19,16 +19,16 @@
 <head><title>クイズ回答結果</title></head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style3.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style5.css">
+
 <body style="background: url(${pageContext.request.contextPath}/css/背景2.png);">
 <div id="img" class="stamp2 poyon" ></div>
 <div class="word" style="text-align: center;">
 
 <p class="judge TextTyping">・・・   残念！はずれです   ・・・</p>
 <p class="judge2 TextTyping">回答にかかった時間は<%= answertime %>secです。</p>
-
-<br/>
 <p class="judge2 TextTyping">正解は ”<%= result %>" でした。</p>
-<p class="judge2 TextTyping">【解説】　<%= explanation %></p>
+<p class="judge2 TextTyping">【解説】 <%= explanation %></p>
 <br/>
 <br/>
 <a class="next">次に進む場合は、ボタンを押してください。</a><br/>
@@ -46,6 +46,30 @@
         <script src="${pageContext.request.contextPath}/js/8-10.js"></script>
 </body>
 <footer>
+ 
+ 
+ <%--魔理沙、霊夢 --%>
+<div class="change_img4"><%--画像を切り替えるための処理。切り替え画像を<P>の中に記述 --%>
+  <img id="img4" class="korokoro4" src="${pageContext.request.contextPath}/css/魔理沙incorrect1.png" width="200" height="200">
+  <img id="img4" class="korokoro4" src="${pageContext.request.contextPath}/css/魔理沙incorrect2.png" width="200" height="200">
+  </div>
+  
+  
+  <div class="change_img3"><%--画像を切り替えるための処理。切り替え画像を<P>の中に記述 --%>
+  <img id="img3" class="korokoro3" src="${pageContext.request.contextPath}/css/霊夢incorrect1.png" width="200" height="200">
+  <img id="img3" class="korokoro3" src="${pageContext.request.contextPath}/css/霊夢incorrect2.png" width="200" height="200">
+	</div>
+	
+<%-- <section>
+<!--吹き出し-->
+<div class="balloon5" >
+  <a>ハズレです。</a>
+  <%-- <a class="timer">爆発するー。</a>--%>
+ <%--  </div>
+</section>--%>
+
+ 
+ 
  
  <script>
  'use strict';

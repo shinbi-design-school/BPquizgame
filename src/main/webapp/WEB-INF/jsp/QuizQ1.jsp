@@ -69,7 +69,7 @@
   </p>
   
   <div class="timer balloon1"><!--吹き出し-->
-  <p class="timer">がんばれー。がんばれー。</p>
+  <p class="timer">がんばれーがんばれー</p>
   <%--<p class="timer">しぬー。しぬー。</p>--%>
 </div>
   
@@ -81,7 +81,7 @@
 <section>
 <!--吹き出し-->
 <div class="timer balloon2" >
-  <p class="timer"><span id="Timer"></span>秒しかないよ！急げー。</p>
+  <p class="timer"><span id="Timer"></span>秒しかないよ！急げー</p>
   <%-- <p class="timer">爆発するー。</p>--%>
   </div>
 </section>

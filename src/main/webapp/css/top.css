@@ -1,0 +1,135 @@
+@charset "UTF-8";
+@charset "utf-8";
+
+/*==================================================
+パタッ
+===================================*/
+
+/* 下へ */
+.flipDown{
+animation-name:flipDownAnime;
+animation-duration:1s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes flipDownAnime{
+  from {
+    transform: perspective(2500px) rotateX(100deg);
+  opacity: 0;
+  }
+
+  to {
+    transform: perspective(2500px) rotateX(0);
+  opacity: 1;
+  }
+}
+
+
+/* 左へ */
+.flipLeft{
+animation-name:flipLeftAnime;
+animation-duration:1s;
+animation-fill-mode:forwards;
+perspective-origin:left center;
+opacity:0;
+}
+
+@keyframes flipLeftAnime{
+  from {
+   transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
+  opacity: 0;
+  }
+
+  to {
+  transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+  opacity: 1;
+  }
+}
+
+
+/* 左上へ */
+.flipLeftTop{
+animation-name:flipLeftTopAnime;
+animation-duration:1s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes flipLeftTopAnime{
+  from {
+   transform: translate(-20px,80px) rotate(-15deg);
+  opacity: 0;
+  }
+
+  to {
+   transform: translate(0,0) rotate(0deg);
+  opacity: 1;
+  }
+}
+
+/* 右へ */
+.flipRight{
+animation-name:flipRightAnime;
+animation-duration:1s;
+animation-fill-mode:forwards;
+perspective-origin:right center;
+opacity:0;
+}
+
+@keyframes flipRightAnime{
+  from {
+   transform: perspective(600px) translate3d(0, 0, 0) rotateY(-30deg);
+  opacity: 0;
+  }
+
+  to {
+  transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+  opacity: 1;
+  }
+}
+
+/* 右上へ */
+.flipRightTop{
+animation-name:flipRightTopAnime;
+animation-duration:1s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes flipRightTopAnime{
+  from {
+   transform: translate(-20px,80px) rotate(25deg);
+   opacity: 0;
+  }
+
+  to {
+   transform: translate(0,1) rotate(0deg);
+  opacity: 1;
+  }
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+
+
+p{
+  margin:10px 0;
+}
+
+.flex{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.box{
+  width: 500px;
+  padding: 20px;
+  margin:0 20px 20px 20px;
+  background: #666;
+  color: #fff;
+  position: fixed;
+  top: 100px;
+  left: 55%;
+}
