@@ -30,8 +30,12 @@
                       <td>
                           <input id="submit" type="submit" value="ログイン">
                       </td>
+                      
                   </tr>
               </table>
+          </form>
+          <form method="post" action="newuser">
+             <input id="newbtn" type="submit" value="新規登録">
           </form>
 <%
     if(error != null) {

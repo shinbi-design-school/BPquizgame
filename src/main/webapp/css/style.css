@@ -80,7 +80,19 @@ input {
     background-color: #33FF99;
 }
 
+#newbtn {
+	color: white;
+    font-weight: bold;
+    background-color: #33FF99;
+    padding: 5px 10px;
+    margin: 5px 10px;
+}
+
 #submit:hover {
+	opacity: 0.5;
+}
+
+#newbtn:hover {
 	opacity: 0.5;
 }
 

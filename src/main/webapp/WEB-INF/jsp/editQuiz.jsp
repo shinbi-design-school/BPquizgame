@@ -59,7 +59,13 @@
                 </tr>
                 <tr>
                     <th>答え</th>
-                    <td><input type="text" name="answer" value="<%= answer %>"></td>
+                    <td>
+                       <select name="answer">
+                          <option value="1">選択肢1</option>
+                          <option value="2">選択肢2</option>
+                          <option value="3">選択肢3</option>
+                          <option value="4">選択肢4</option>
+                       </select>
                 </tr>
                 <tr>
                     <th>説明</th>
