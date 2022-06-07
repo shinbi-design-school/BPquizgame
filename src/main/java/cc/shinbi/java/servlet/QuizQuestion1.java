@@ -70,7 +70,10 @@ public class QuizQuestion1 extends JspServlet{
 			String choices3 = (String)session.getAttribute("choices3");//QuizResultから回答3を受け取るためセッションに接続
 			String choices4 = (String)session.getAttribute("choices4");//QuizResultから回答4を受け取るためセッションに接続
 			String answer = (String)session.getAttribute("answer");//QuizResultから答えを受け取るためセッションに接続 
-		 	 
+			
+			String str2 = answer;//answerはString型で登録されているので、intへ変換する
+		    int in1 = Integer.parseInt(str2);//入力値を整数に変換し、in1に代入。
+		     
 		 	
 					
 					System.out.println("質問：" + question);
@@ -155,14 +158,8 @@ public class QuizQuestion1 extends JspServlet{
 				
 			
 			System.out.println("回答：" + in);
-			
-			
-			
-			 String str2 = answer;//iには各問題No,が代入され、”String str[][] = {”で入力された5つ目の条件＝答えを呼び出してやる。
-		       int in1 = Integer.parseInt(str2);//入力値を整数に変換し、in1に代入。
-	 
-		       System.out.println("答え：" + in1);
-
+			System.out.println("答え：" + in1);
+	
 		       
 		         
 		      // 処理後の時刻を取得
