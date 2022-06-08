@@ -43,7 +43,7 @@
     <div id="wrapper">
   
 
-  <p><span class="blurTrigger"><img src="${pageContext.request.contextPath}/がんばりましょう.png" width="300" height="300"> <br/> 
+  <p><span class="blurTrigger"><img src="${pageContext.request.contextPath}/css/がんばりましょう.png" width="300" height="300"> <br/> 
  
   
   </span>
