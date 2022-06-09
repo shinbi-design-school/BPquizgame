@@ -30,7 +30,7 @@ int rank = (int) request.getAttribute("rank");
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/last 3.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/last 5-8.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/last reset.css">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/last delay.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/last delya.css">
 
 </head>
 

@@ -11,6 +11,12 @@
 %>
 
 <header>
+<!--タイトル粒子化r-->
+<div id="wrapper">
+<canvas id="particle"></canvas>
+<!--/wrapper--></div>
+
+
 <%
     if(user != null) {
 %>
@@ -18,16 +24,33 @@
 <%
     }
 %>
-    <div id="title">
-         <h1 id="systemName">クイズゲーム</h1>
-    </div>
+    
+    <%--<div id="title">
+         <h1 id="systemName">Boost クイズゲーム</h1>
+    </div>--%>
+    
 <%
     if(user != null) {
 %>
         <div id="welcome">
-           <%= user.getName() %> さん。ようこそ。
+           <br/><%= user.getName() %> さん。ようこそ。
         </div>
 <%
     }
 %>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+<script src="js/particleText.js"></script>
+<script>
+$("#particle").particleText({
+	text: "Boost QuizGame", // 表示させたいテキスト。改行の場合は<br>追加
+	colors:["#fff","#fff", "#fff"], // パーティクルの色を複数指定可能
+	speed: "middle", // slow, middle, high の3つから粒子が集まる速さを選択
+	});
+</script>
 </header>
+
+

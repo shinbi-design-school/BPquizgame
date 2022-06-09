@@ -31,13 +31,12 @@
 <p class="judge2 TextTyping">【解説】 <%= explanation %></p>
 <br/>
 <br/>
+<div>
 <a class="next">次に進む場合は、ボタンを押してください。</a><br/>
 <form action="${pageContext.request.contextPath}/QuizResult" method="get">
 	<button name="next" value="next">次に進む</button>
 
 </form>
-
-
 <br/><br/><br/><br/>
 <a href="${pageContext.request.contextPath}/top">戻る</a><br>
 </div>

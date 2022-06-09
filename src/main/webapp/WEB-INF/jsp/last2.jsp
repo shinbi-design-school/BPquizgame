@@ -29,7 +29,7 @@
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/last 3.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/last 幾5-4.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/last 幾reset.css">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/last delay.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/last delya.css">
 
 
 </head>

@@ -1,5 +1,27 @@
-@charset "UTF-8";
+
 @charset "utf-8";
+
+.container {
+	display: flex;
+	align-content: stretch;
+	align-items: center;
+	z-index: 2;
+}
+
+
+.toppage{
+  color: black;
+  position: fixed;
+  top: 30%;
+  left: 10%;
+  text-align: center;
+  font-style: italic;
+  font-size: 20px;
+    z-index: 2;
+    color: white;
+}
+
+
 
 /*==================================================
 パタッ
@@ -71,7 +93,7 @@ opacity:0;
 /* 右へ */
 .flipRight{
 animation-name:flipRightAnime;
-animation-duration:1s;
+animation-duration:5s;
 animation-fill-mode:forwards;
 perspective-origin:right center;
 opacity:0;
@@ -124,12 +146,65 @@ p{
 }
 
 .box{
-  width: 500px;
-  padding: 20px;
-  margin:0 20px 20px 20px;
-  background: #666;
+  width: 365px; 
+  padding: 30px 10px 15px 30px; 
+  margin: 20px;
+  background: rgba(128, 0, 255, 0.3); /*"rgba"にすると、色番号の後に透過度をしていできる*/
   color: #fff;
   position: fixed;
-  top: 100px;
-  left: 55%;
+  top: 216px; 
+  left: 66%; 
+  box-shadow: 0 0 1px 1px #808080 inset;
+  border-radius: 7px
 }
+
+
+
+
+/*ボタンアニメーション////////////////////////////////////////////////*/
+
+ .genre{
+ cursor:pointer;
+ font-weight: bold;
+ font-size: 80%;
+ height: 45px;
+ width: 155px;
+   z-index: 2;
+ }
+
+ .animoButtonOverlay{
+ display:inline-block;
+ padding:10px 25px;
+ position:relative;color:#f39c12;
+ cursor:pointer;
+ font-weight: bold;
+ }
+ 
+ .animoButtonOverlay::before{
+ content:'';
+ position:absolute;
+ height:100%;
+ width:100%;
+ top:5px;
+ right:5px;
+ background-color:#f39c12;
+ z-index:-1;
+ transition:transform .2s ease-in-out;
+ }
+ 
+ .animoButtonOverlay::after{
+ content:'';
+ position:absolute;
+ top:0;
+ left:0;
+ height:100%;
+ width:100%;
+ border:1px solid rgb(255, 128, 0);
+ }
+ 
+ .animoButtonOverlay:hover::before{
+ transform:translate(6px,-4px);
+ }
+ 
+ /*ボタンアニメーション////////////////////////////////////////////////*/
+        
