@@ -4,6 +4,7 @@ package cc.shinbi.java.servlet;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -298,12 +299,12 @@ System.out.println("ジャンル毎ID：" + choices4);
 					operation = (String) session.getAttribute("operation");
 					System.out.println("operation有無：" + operation);
 			    	//Thread.sleep(300);//ページが開く前にデータ処理時間が必要?
-			    	sc.getRequestDispatcher("/WEB-INF/jsp/last1.jsp").forward(request,  response);
-			    	/*
+			    //	sc.getRequestDispatcher("/WEB-INF/jsp/last1.jsp").forward(request,  response);
+			    	
 					String disp = "/point";//この３行の処理を行うことで、以降の処理は"/point"=PointServletに渡される。
 				      RequestDispatcher dispatch = request.getRequestDispatcher(disp);
 				      dispatch.forward(request, response);
-			    	*/
+					
 			    	
 			    }else if((over != null || next != null) && i == 5 && totalresult >= 55) {
 			    	String operation = "operation";
@@ -311,12 +312,13 @@ System.out.println("ジャンル毎ID：" + choices4);
 					operation = (String) session.getAttribute("operation");
 					System.out.println("operation有無：" + operation);
 					//Thread.sleep(300);//ページが開く前にデータ処理時間が必要?
-			    	sc.getRequestDispatcher("/WEB-INF/jsp/last2.jsp").forward(request,  response);
-			    	/*
+			   // 	sc.getRequestDispatcher("/WEB-INF/jsp/last2.jsp").forward(request,  response);
+			    	
 			    	String disp = "/point";//この３行の処理を行うことで、以降の処理は"/point"=PointServletに渡される。
-				      RequestDispatcher dispatch = request.getRequestDispatcher(disp);
+				     RequestDispatcher dispatch = request.getRequestDispatcher(disp);
 				      dispatch.forward(request, response);
-				      */
+				
+				     
 				     
 			    }else if((over != null || next != null) && i == 5 && totalresult < 55) {
 			    	String operation = "operation";
@@ -324,12 +326,13 @@ System.out.println("ジャンル毎ID：" + choices4);
 					operation = (String) session.getAttribute("operation");
 					System.out.println("operation有無：" + operation);
 			    	//Thread.sleep(300);//ページが開く前にデータ処理時間が必要?
-			    	sc.getRequestDispatcher("/WEB-INF/jsp/last3.jsp").forward(request,  response);
-			    	/*
-			    	String disp = "/point";//この３行の処理を行うことで、以降の処理は"/point"=PointServletに渡される。
+			   // 	sc.getRequestDispatcher("/WEB-INF/jsp/last3.jsp").forward(request,  response);
+			    	
+			   	String disp = "/point";//この３行の処理を行うことで、以降の処理は"/point"=PointServletに渡される。
 				      RequestDispatcher dispatch = request.getRequestDispatcher(disp);
 				      dispatch.forward(request, response);
-				      */
+					
+				      
 			    }
 				
 			

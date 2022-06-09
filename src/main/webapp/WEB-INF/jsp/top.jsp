@@ -6,10 +6,15 @@
 <%@ page import="cc.shinbi.java.model.Const" %>
 <%@ page import="cc.shinbi.java.model.entity.User" %>
 <%@ page import="cc.shinbi.java.model.entity.Quiz" %>
-
+<%@ page import="java.util.List" %>
+  
 <%
    User loginUser = (User)session.getAttribute(Const.LOGIN_USER_KEY);
    String error = (String)request.getAttribute("error");
+   List<Quiz> quizs = (List<Quiz>)request.getAttribute("quizs");
+   
+
+ 
 %>
 
 <!DOCTYPE html>
@@ -27,11 +32,25 @@
          クイズカテゴリーを選択してください。<br/>
 		<form action="${pageContext.request.contextPath}/QuizResult" method="GET" >
   		<select name="genre">
+  		
+<%
+   for(Quiz quiz : quizs) {
+%>
+        
+  		<option value="<%= quiz.getGenre() %>"><%= quiz.getGenre() %></option>
+<%
+} 
+%>
+
+  		
+ <!--
     		<option value="ジャンル１" selected>ジャンル１</option>
     		<option value="ジャンル２">ジャンル２</option>
     		<option value="ジャンル３">ジャンル３</option>
     		<option value="ジャンル４">ジャンル４</option>
     		<option value="ガンダム">ガンダム</option>
+		
+    -->  		
   		</select>
   		<br/><br/>
 		 クイズゲームをスタートする場合は、以下のボタンを押してください。<br/>

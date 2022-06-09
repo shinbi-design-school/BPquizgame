@@ -6,12 +6,13 @@
 	int count = (int) session.getAttribute("count"); 
 %>
 
-<%--
-	int rank = (int) request.getAttribute("rank"); 
---%>
+
+	
+
   
 <%
 	int totalresult = count*10 + tokutentotal;
+int rank = (int) request.getAttribute("rank"); 
 %>
  
 <!DOCTYPE html>
@@ -49,7 +50,7 @@
   <div class="box fadeUp">正解得点合計<%= count*10 %>点</div>
   <div class="delay-time01 box fadeUp">残り時間ボーナス<%= tokutentotal %>点</div>
   <div class="delay-time02 box fadeUp">総合得点<%= totalresult %>点</div>
-  <div class="delay-time03 box fadeUp">あなたのランキングは<%-- rank --%>位</div>
+  <div class="delay-time03 box fadeUp">あなたのランキングは<%= rank %>位</div>
   <button type="button" onclick=location.href="${pageContext.request.contextPath}/top">トップページへ戻る</button>
 </div>
 

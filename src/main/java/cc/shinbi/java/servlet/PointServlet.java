@@ -23,6 +23,8 @@ public class PointServlet extends JspServlet{
 
 	String operation = null;
 	int totalresult = 0;
+	int user_id = 0;
+	String name = null;
 	
 	@Override
 	protected String view(
@@ -30,12 +32,18 @@ public class PointServlet extends JspServlet{
 			HttpServletResponse response,
 			Connection connection,
 			User loginUser) throws Exception {
-		HttpSession session = request.getSession();
 		
-		//String operation = request.getParameter("operation");
+		HttpSession session = request.getSession();
 		operation = (String) session.getAttribute("operation");
 		String jsp = null;
+		
 		System.out.println("operation有無2：" + operation);
+		System.out.println("totalresult：" + totalresult);
+		System.out.println("ユーザid：" + loginUser.getId());
+		System.out.println("名前：" + loginUser.getName());
+		
+		
+		
 		PointDAO dao = new PointDAO(connection);
 		
 		
@@ -59,9 +67,10 @@ public class PointServlet extends JspServlet{
 		String jsp = null;
      //   String error = "";
 	 	 HttpSession session = request.getSession();
+	 	 totalresult = (int) session.getAttribute("totalresult");
         //formから入力された値を取得 ここにnameを追加
-		int user_id = (int) request.getAttribute("user_id");
-		String name = (String) session.getAttribute("name");
+	 	int user_id = loginUser.getId();
+	 	String name = loginUser.getName();
         int score = (int) session.getAttribute("totalresult");
                                                
         
@@ -78,6 +87,7 @@ public class PointServlet extends JspServlet{
 	//登録したレコード順位を取得するメソッドを呼び出す
 	private String newPoint(HttpServletRequest request, PointDAO dao, User loginUser) throws SQLException {
 		String jsp = null;
+		HttpSession session = request.getSession();
 	//	int rank = 0;
 
 		//一番新しいレコードの取得
@@ -90,7 +100,7 @@ public class PointServlet extends JspServlet{
    		rank = (int) request.getAttribute("rank");
    		System.out.println("rank有無：" + rank);
    		
-   		jsp = "/WEB-INF/jsp/ranking.jsp";
+   	//	jsp = "/WEB-INF/jsp/ranking.jsp";
    		
    		///おだ追加///////////////////////////////////////
    		//ServletContext sc = getServletContext();  
@@ -110,7 +120,7 @@ public class PointServlet extends JspServlet{
    		}
    		////////////////////////////////////////////////
 		
-		
+   		session.removeAttribute("operation");
 		return jsp;
 		
 

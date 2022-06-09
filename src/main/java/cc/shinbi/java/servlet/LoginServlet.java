@@ -1,6 +1,7 @@
 package cc.shinbi.java.servlet;
 
 import java.sql.Connection;
+import java.util.List;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -8,7 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import cc.shinbi.java.model.Const;
+import cc.shinbi.java.model.dao.GenreDAO;
 import cc.shinbi.java.model.dao.UserDAO;
+import cc.shinbi.java.model.entity.Quiz;
 import cc.shinbi.java.model.entity.User;
 
 
@@ -65,6 +68,11 @@ public class LoginServlet extends JspServlet {
 		else {
 			HttpSession session = request.getSession();
 			session.setAttribute(Const.LOGIN_USER_KEY, user);
+			
+			//GenreDAOからジャンルを取得するメソッドを呼び出してListを作成しrequestにset
+			GenreDAO dao = new GenreDAO(connection);
+			List<Quiz> quizs = dao.searchGenre();
+			request.setAttribute("quizs", quizs);
 			
 			jsp = "/WEB-INF/jsp/top.jsp";
 		}
