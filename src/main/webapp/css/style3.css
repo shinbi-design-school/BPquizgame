@@ -20,6 +20,7 @@ body {
     background: url(背景.png)center / cover;
     background-size: cover;
     background-attachment: fixed;
+    text-align: center;
 }
 
 
@@ -50,7 +51,7 @@ button.btn {
 	width: 100%;
 	box-shadow: 2px 2px 4px;
 
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 700;
   line-height: 1;
   position: relative;
@@ -203,7 +204,7 @@ opacity: 0;
 
 .bomb{
   position: fixed;
-  top: 420px;
+  top: 400px;
   left: 50%;
 
   display: block;
@@ -509,7 +510,7 @@ opacity: 0;
   top: 43%;
   left: 63%;
   background: url(incorrect.png)center / cover;
-  z-index: 0;
+  z-index: 1;
   display: block;
   width: 500px;
   height: 500px;
@@ -518,7 +519,6 @@ opacity: 0;
 }
 
 .judge2 {
-	z-index: 2;
 	text-align: center;
 	padding: 0 10%;
 	font-size: 30px;
@@ -665,7 +665,7 @@ opacity: 0;
 .change_img1 img:nth-child(1) {
 	      position: fixed;
       top: 70%;
-      left: 87%;
+      left: 86%;
   z-index: 2;
   visibility: visible;
 }
@@ -673,7 +673,7 @@ opacity: 0;
 .change_img1 img:nth-child(2) {
       position: fixed/*absolute*/;
       top: 70%;
-      left: 87%;
+      left: 86%;
       
   -webkit-animation-delay: 9s;
           animation-delay: 9s;
@@ -841,11 +841,11 @@ opacity: 0;
 .balloon1 {
     
   position: fixed;
-  top: 79%;
-  left: 14%;
+  top: 81%;
+  left: 12%;
   display: inline-block;
   margin: 1.5em 0;
-  padding: 20px 20px;
+  padding: 10px 20px;
   min-width: 120px;
   max-width: 100%;
   color: #555;
@@ -877,11 +877,11 @@ opacity: 0;
 .balloon2 {
     
   position: fixed;
-  top: 79%;
+  top: 81%;
   right: 13%;
    display: inline-block;
   margin: 1.5em 0;
-  padding: 20px 20px;
+  padding: 10px 20px;
   min-width: 120px;
   max-width: 100%;
   color: #555;
