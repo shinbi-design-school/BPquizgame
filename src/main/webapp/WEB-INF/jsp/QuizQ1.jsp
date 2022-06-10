@@ -40,17 +40,26 @@
 	<%--<input id="Question1" type="hidden" name="Q1" value="Q1">--%> 
 	
 	
+	<!--    <audio id="sound" preload="auto">
+    <source src="${pageContext.request.contextPath}/css/nc97718.mp3" type="audio/mp3">
+    </audio>-->  
+	
 <div class="container">
-	<button class="box fadeUp btn btn-flatw" name="1" value="1"><%= choices1 %></button>
-    <button class="delay-time03 box fadeUp btn btn-flat" name="2" value="2"><%= choices2 %></button>
+	<button class="box fadeUp btn btn-flatw" name="1" value="1" onclick="sound()"><%= choices1 %></button>
+    <button class="delay-time03 box fadeUp btn btn-flat" name="2" value="2" onclick="sound()"><%= choices2 %></button>
     <audio id="sound" preload="auto">
-    <source src="nc97718.mp3" type="audio/mp3">
+    <source src="${pageContext.request.contextPath}/css/nc2039.mp3" type="audio/mp3">
     </audio>
+        
 <div class=bomb></div>
 </div>
 <div class="container">
-    <button class="delay-time02 box fadeUp btn btn-flat" name="3" value="3"><%= choices3 %></button>
-    <button class="delay-time04 box fadeUp btn btn-flat" name="4" value="4"><%= choices4 %></button>
+    <button class="delay-time02 box fadeUp btn btn-flat" name="3" value="3" onclick="sound()"><%= choices3 %></button>
+    <button class="delay-time04 box fadeUp btn btn-flat" name="4" value="4" onclick="sound()"><%= choices4 %></button>
+        <audio id="sound" preload="auto">
+    <source src="${pageContext.request.contextPath}/css/nc2039.mp3" type="audio/mp3">
+    </audio>
+    
 </div>  	
     </form>
 <section>
@@ -68,8 +77,8 @@
   <img id="img2" class="poyooon2" src="${pageContext.request.contextPath}/css/魔理沙2.png" width="200" height="200">
   </p>
   
-  <div class="timer balloon1"><!--吹き出し-->
-  <p class="timer">がんばれーがんばれー</p>
+  <div id="hideMe" class="timer balloon1"><!--吹き出し-->
+  <p id="hideMe" class="timer">がんばれーがんばれー</p>
   <%--<p class="timer">しぬー。しぬー。</p>--%>
 </div>
   
@@ -78,14 +87,15 @@
   <img id="img2" class="poyooon1" src="${pageContext.request.contextPath}/css/霊夢2.png" width="200" height="200">
 	</p>
 	
+	
+	
 <section>
 <!--吹き出し-->
-<div class="timer balloon2" >
-  <p class="timer"><span id="Timer"></span>秒しかないよ！急げー</p>
+<div id="hideMe" class="timer balloon2" >
+  <p id="hideMe" class="timer"><span id="Timer"></span>秒しかないよ！急げー</p>
   <%-- <p class="timer">爆発するー。</p>--%>
   </div>
 </section>
-
 
 
 
@@ -128,7 +138,6 @@
   
  <script>
  'use strict';
- 
  
  <%--ページを後戻りさせない処理--%>
  history.pushState(null, null, null);

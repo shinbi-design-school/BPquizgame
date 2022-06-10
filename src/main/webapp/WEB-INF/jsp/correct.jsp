@@ -31,7 +31,7 @@
 <br/>
 <a class="next">次に進む場合は、ボタンを押してください。</a><br/><br/>
 <form action="${pageContext.request.contextPath}/QuizResult" method="get">
-	<button name="next" value="next">次に進む</button>
+	<button name="next" value="next" style="font-size:20px;">次に進む</button>
 </form>
 <div id="img" class="stamp1 poyon" ></div>
 <br/>

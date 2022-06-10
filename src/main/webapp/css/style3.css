@@ -489,7 +489,7 @@ opacity: 0;
 	color: white;
 	text-shadow: 1px 2px 3px #808080;
 	transition-delay: 1s;
-	z-index: 4;
+	z-index: 2;
 }
 
 .judge {
@@ -497,7 +497,7 @@ opacity: 0;
   	letter-spacing: 0.1em;
   	color: white;
   	text-shadow: 1px 2px 3px #191970;
-  	z-index: 4;
+  	z-index: 2;
 }
 /*correct画面==================================================*/
 
@@ -510,7 +510,7 @@ opacity: 0;
   top: 43%;
   left: 63%;
   background: url(incorrect.png)center / cover;
-  z-index: 1;
+  z-index: 0;
   display: block;
   width: 500px;
   height: 500px;
@@ -526,7 +526,7 @@ opacity: 0;
   	color: white;
   	text-shadow: 1px 2px 3px #191970;
   	transition-delay: 2s;
-  	z-index: 4;
+  	z-index: 2;
 }
 
 
@@ -838,11 +838,15 @@ opacity: 0;
 
 
     /*魔理沙、霊夢吹き出し==================================================*/
+ 
+
+    
+    
 .balloon1 {
     
   position: fixed;
   top: 81%;
-  left: 12%;
+  left: 15%;
   display: inline-block;
   margin: 1.5em 0;
   padding: 10px 20px;
@@ -870,6 +874,8 @@ opacity: 0;
   margin: 0;
   padding: 0;
 }
+
+
 
 
 
@@ -905,5 +911,37 @@ opacity: 0;
   margin: 0;
   padding: 0;
 }
+
+
+
+#hideMe {/*経過時間によって消す作業を行うため、このコードを入れる*/
+    -moz-animation: cssAnimation 0s ease-in 9s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 9s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in 9s forwards;
+    /* Opera */
+    animation: cssAnimation 0s ease-in 9s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+}
+
+
+
+
 
 /*魔理沙、霊夢（クイズ画面）==================================================*/

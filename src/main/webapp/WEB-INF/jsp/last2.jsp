@@ -30,7 +30,7 @@
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/last 幾5-4.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/last 幾reset.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/last delya.css">
-
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style5.css">
 
 </head>
 
@@ -62,4 +62,34 @@
   <script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-4/js/5-4.js"></script>
 
 </body>
+
+
+<footer>
+<%--魔理沙、霊夢 --%>
+<div class="change_img2"><%--画像を切り替えるための処理。切り替え画像を<P>の中に記述 --%>
+  <img id="img2" class="puyon2" src="${pageContext.request.contextPath}/css/魔理沙1last2.png" width="200" height="200">
+  <img id="img2" class="puyon2" src="${pageContext.request.contextPath}/css/魔理沙2last2.png" width="200" height="200">
+  </div>
+  
+  <%-- <div class="balloon4"><!--吹き出し-->--%>
+  <%-- <a>タイムオーバーです。</a> --%>
+  <%--<a class="timer">しぬー。しぬー。</a>--%>
+<%-- </div> --%>
+  
+  <div class="change_img1"><%--画像を切り替えるための処理。切り替え画像を<P>の中に記述 --%>
+  <img id="img2" class="puyon1" src="${pageContext.request.contextPath}/css/霊夢1last2.png" width="200" height="200">
+  <img id="img2" class="puyon1" src="${pageContext.request.contextPath}/css/霊夢2last2.png" width="200" height="200">
+	</div>
+	
+
+<!--吹き出し-->
+<%-- <div class="balloon3" >
+  <a>たいむおーばーです。</a>  --%>
+  <%-- <a class="timer">爆発するー。</a>--%>
+  <%-- </div>--%>
+
+</footer>
+
+
+
 </html>

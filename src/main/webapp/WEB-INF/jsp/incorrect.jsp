@@ -17,29 +17,32 @@
 <!DOCTYPE html>
 <html>
 <head><title>クイズ回答結果</title></head>
-<meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style3.css">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style5.css">
+	<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style3.css">
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style5.css">
 
 <body style="background: url(${pageContext.request.contextPath}/css/背景2.png);">
-<div id="img" class="stamp2 poyon" ></div>
-<div class="word" style="text-align: center;">
 
-<p class="judge TextTyping">・・・   残念！はずれです   ・・・</p>
-<p class="judge2 TextTyping">回答にかかった時間は<%= answertime %>secです。</p>
-<p class="judge2 TextTyping">正解は ”<%= result %>" でした。</p>
-<p class="judge2 TextTyping">【解説】 <%= explanation %></p>
+	<div id="img" class="stamp2 poyon" ></div>
+
+	<div class="word" style="text-align: center;">
+		<p class="judge TextTyping">・・・   残念！はずれです   ・・・</p>
+		<p class="judge2 TextTyping">回答にかかった時間は<%= answertime %>secです。</p>
+		<p class="judge2 TextTyping">正解は ”<%= result %>" でした。</p>
+		<p class="judge2 TextTyping">【解説】 <%= explanation %></p>
 <br/>
 <br/>
-<div>
-<a class="next">次に進む場合は、ボタンを押してください。</a><br/>
-<form action="${pageContext.request.contextPath}/QuizResult" method="get">
-	<button name="next" value="next">次に進む</button>
 
-</form>
+		<a class="next">次に進む場合は、ボタンを押してください。</a><br/>
+	<form action="${pageContext.request.contextPath}/QuizResult" method="get"><br/>
+	<button  name="next" value="next" style="font-size:20px;"> 次に進む </button>
+
+	</form>
 <br/><br/><br/><br/>
-<a href="${pageContext.request.contextPath}/top">戻る</a><br>
-</div>
+		<a href="${pageContext.request.contextPath}/Stop">戻る</a><br>
+	
+	</div>
+
  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="${pageContext.request.contextPath}/js/8-10.js"></script>

@@ -11,6 +11,7 @@
 %>
 
 <header>
+
 <!--タイトル粒子化r-->
 <div id="wrapper">
 <canvas id="particle"></canvas>

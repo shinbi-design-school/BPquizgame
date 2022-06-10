@@ -10,7 +10,7 @@
 
 
 .toppage{
-  color: black;
+  /*color: black;*/
   position: fixed;
   top: 30%;
   left: 10%;
@@ -175,7 +175,8 @@ p{
  .animoButtonOverlay{
  display:inline-block;
  padding:10px 25px;
- position:relative;color:#f39c12;
+ /*position:relative;color:#f39c12;*/
+ position:relative;color:rgb(128, 0, 255);
  cursor:pointer;
  font-weight: bold;
  }
@@ -187,7 +188,8 @@ p{
  width:100%;
  top:5px;
  right:5px;
- background-color:#f39c12;
+ /*background-color:#f39c12;*/
+ background-color:rgba(128, 0, 255, 1.0);
  z-index:-1;
  transition:transform .2s ease-in-out;
  }
@@ -199,7 +201,8 @@ p{
  left:0;
  height:100%;
  width:100%;
- border:1px solid rgb(255, 128, 0);
+ /*border:1px solid rgb(255, 128, 0);*/
+ border:1px solid rgba(128, 0, 255, 1.0);
  }
  
  .animoButtonOverlay:hover::before{
