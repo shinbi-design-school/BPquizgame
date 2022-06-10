@@ -32,27 +32,24 @@
       
       <main>
       <div class="login">
-          <form method="post" action="login">
-              <table id="login">
-                  <tr>
-                      <th>アカウント名</th>
-                      <td><input type="text" name="account"></td>
-                  </tr>
-                  <tr>
-                      <th>パスワード</th>
-                      <td><input type="password" name="password"></td>
-                  </tr>
-                  </table>
-                      
-                          <br/>
-                          <input id="submit" type="submit" value="ログイン">
-                      
-          </form>
-          <br/>
-          <form method="post" action="newuser">
-             <input id="newbtn" type="submit" value="新規登録">
-          </form>
-          
+      
+      
+      
+      <form id="login_form" name="login_form" method="post" action="login">
+      <div class="login_form_top">
+        <h1>LOGIN</h1>
+        <p>アカウント名、パスワードを入力してください。</p>
+      </div>
+      <div class="login_form_btm">
+        <input type="text" name="account" placeholder="アカウント名">
+        <input type="password" name="password" placeholder="パスワード" class="pass">
+        <input type="submit" name="botton" value="LOGIN">
+        <input type="submit" name="botton" formaction="newuser"value="新規登録">
+      </div>
+    </form>
+      
+      
+      
 <%
     if(error != null) {
 %>

@@ -19,23 +19,23 @@
       <jsp:include page="header.jsp" />
       
       <main>
-         <form method="post" action="newuser">
-            <table id="user_table">
+         <form id="edit_form" method="post" action="newuser">
+            <table id="edit_table">
                <tr>
                   <th>アカウント名</th>
-                  <td><input type="text" name="account" ></td>
+                  <td><input type="text" name="account" placeholder="アカウント名を入力してください"></td>
                </tr>
                <tr>
                   <th>名前</th>
-                  <td><input type="text" name="name" ></td>
+                  <td><input type="text" name="name" placeholder="名前を入力してください" ></td>
                </tr>
                <tr>
                   <th>パスワード</th>
-                  <td><input type="password" name="password"></td>
+                  <td><input type="password" name="password" placeholder="パスワードを入力してください"></td>
                </tr>
                <tr>
                   <th>パスワード(確認)</th>
-                  <td><input type="password" name="confirmed"></td>
+                  <td><input type="password" name="confirmed" placeholder="パスワードをもう一度入力してください"></td>
                </tr>
                <tr>
                   <td>

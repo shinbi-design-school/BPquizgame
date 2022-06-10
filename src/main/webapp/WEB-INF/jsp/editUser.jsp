@@ -38,32 +38,32 @@
       <jsp:include page="header.jsp" />
       
       <main>
-         <form method="post" action="user">
-            <table id="user_table">
+         <form id="edit_form" method="post" action="user">
+            <table id="edit_table">
                <tr>
                   <th>アカウント名</th>
-                  <td><input type="text" name="account" value="<%= account %>"></td>
+                  <td><input type="text" name="account" value="<%= account %>" placeholder="アカウント名を入力してください"></td>
                </tr>
                <tr>
                   <th>名前</th>
-                  <td><input type="text" name="name" value="<%= name %>"></td>
+                  <td><input type="text" name="name" value="<%= name %>" placeholder="名前を入力してください"></td>
                </tr>
                <tr>
                   <th>権限</th>
                   <td>
-                     <input type="radio" name="is_admin" value="true"
-                        <%= adminOption %>> 管理者
-                     <input type="radio" name="is_admin" value="false"
-                        <%= userOption %>> 一般
+                     <input type="radio" name="is_admin" value="true" <%= adminOption %>> 
+                        <label id="radio">管理者</label>
+                     <input type="radio" name="is_admin" value="false"<%= userOption %>> 
+                        <label id="radio">一般</label>
                   </td>
                </tr>
                <tr>
                   <th>パスワード</th>
-                  <td><input type="password" name="password"></td>
+                  <td><input type="password" name="password" placeholder="パスワードを入力してください"></td>
                </tr>
                <tr>
                   <th>パスワード(確認)</th>
-                  <td><input type="password" name="confirmed"></td>
+                  <td><input type="password" name="confirmed" placeholder="もう一度パスワードを入力してください"></td>
                </tr>
                <tr>
                   <td>

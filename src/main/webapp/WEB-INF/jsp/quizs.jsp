@@ -30,12 +30,12 @@
       
       <div>
             <a href="javascript:addQuiz()">
-               <span id="new_message_icon" class="icon far fa-plus-square"></span>
+               <span id="addicon" class="icon far fa-plus-square"></span>
             </a>
        </div>
        
 
-       <table id="users">
+       <table id="tables">
             <tr>
                <th>質問内容</th>
                <th>操作</th>

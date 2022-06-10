@@ -33,10 +33,10 @@
          </form>
          <div>
             <a href="javascript:addUser()">
-               <span class="icon fas fa-user-plus"></span>
+               <span id="addicon" class="icon fas fa-user-plus"></span>
             </a>
          </div>
-         <table id="users">
+         <table id="tables">
             <tr>
                <th>アカウント名</th>
                <th>名前</th>

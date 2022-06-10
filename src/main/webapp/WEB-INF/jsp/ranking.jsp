@@ -25,7 +25,7 @@
       
       <h1>ランキング</h1>
        
-       <table id="users">
+       <table id="tables">
             <tr>
                <th>順位</th>
                <th>名前</th>

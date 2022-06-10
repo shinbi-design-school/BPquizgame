@@ -20,51 +20,55 @@
     <body>
       <jsp:include page="header.jsp" />
       <main>
-         <form method="post" action="postquiz">
+         <form id="edit_form" method="post" action="postquiz">
          <input type="hidden"  name="operation" value="add">
             <table id="postquiz">
                 <tr>
                     <th>クイズ内容</th>
-                    <td><input type="text" name="question"></td>
+                    <td><input type="text" name="question" placeholder="クイズ内容を入力してください"></td>
                 </tr>
                 <tr>
                     <th>選択肢1</th>
-                    <td><input type="text" name="choices1"></td>
+                    <td><input type="text" name="choices1" placeholder="選択肢1を入力してください"></td>
                 </tr>
                 <tr>
                     <th>選択肢2</th>
-                    <td><input type="text" name="choices2"></td>
+                    <td><input type="text" name="choices2" placeholder="選択肢2を入力してください"></td>
                 </tr>
                 <tr>
                     <th>選択肢3</th>
-                    <td><input type="text" name="choices3"></td>
+                    <td><input type="text" name="choices3" placeholder="選択肢3を入力してください"></td>
                 </tr>
                 <tr>
                     <th>選択肢4</th>
-                    <td><input type="text" name="choices4"></td>
+                    <td><input type="text" name="choices4" placeholder="選択肢4を入力してください"></td>
                 </tr>
                 <tr>
                     <th>答え</th>
                     <td>  
-                       <select name="answer">
+                    <div class="cp_ipselect cp_sl01">
+                       <select name="answer" >
                           <option value="1">選択肢1</option>
                           <option value="2">選択肢2</option>
                           <option value="3">選択肢3</option>
                           <option value="4">選択肢4</option>
                        </select>
+                    </div>
                     </td>
                 </tr>
                 <tr>
                     <th>説明</th>
-                    <td><input type="text" name="explanation"></td>
+                    <td><input type="text" name="explanation" placeholder="クイズの説明を入力してください"></td>
                 </tr>
                 <tr>
                     <th>クイズジャンル</th>
-                    <td><input type="text" name="genre"></td>
+                    <td><input type="text" name="genre" placeholder="クイズのジャンルを入力してください"></td>
                 </tr>
                 <tr>
                     <td>
+                    <div id="touroku">
                         <input id="submit" type="submit" value="クイズを登録">
+                    </div>
                     </td>
                 </tr>
             </table>
