@@ -1,10 +1,10 @@
 # BPquizgame(Boost-team project "QuizGame")
 クイズシステム (SHINBIデザインスクール Java・Webプログラミング科3期 卒業制作)
 
-製作者氏名　小田　砂岡　坪井　大島
+製作者氏名　小田貴正　砂岡　坪井雅也　大島之敬
 
 
-QuizGameの進め方
+#QuizGameの進め方
 
 ・先ずはログインしてください。
 
