@@ -41,7 +41,7 @@ int rank = (int) request.getAttribute("rank");
   
     <div id="particles-js"></div>
     <div id="wrapper">
-  <p><span class="blurTrigger"><img src="${pageContext.request.contextPath}/css/大変よくできました.png" width="300" height="300"> <br/> 
+  <p><span class="blurTrigger"><img src="${pageContext.request.contextPath}/css/大変よくできました.png" width="350" height="350"> <br/> 
  
   
   </span>

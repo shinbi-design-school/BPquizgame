@@ -41,7 +41,7 @@
   
     <div id="particles-js"></div>
     <div id="wrapper">
-  <p><span class="blurTrigger"><img src="${pageContext.request.contextPath}/css/がんばりました.png" width="300" height="300"> <br/> 
+  <p><span class="blurTrigger"><img src="${pageContext.request.contextPath}/css/がんばりました.png" width="350" height="350"> <br/> 
  
   
   </span>

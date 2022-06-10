@@ -53,18 +53,18 @@ opacity: 0;
 /* アニメーションスタートの遅延時間を決めるCSS*/
 
 .delay-time01{
-animation-delay: 0.5s;
+animation-delay: 0.7s;
 }
 
 .delay-time02{
-animation-delay: 1s;
+animation-delay: 1.4s;
 }
 
 .delay-time03{
-  animation-delay: 1.5s;
+  animation-delay: 2.1s;
   }
   
   .delay-time08{
-    animation-delay: 2s;
+    animation-delay: 2.8s;
     }
     

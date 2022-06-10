@@ -14,7 +14,7 @@ p{
 
 .blur{
 	animation-name:blurAnime;
-	animation-duration:5s;
+	animation-duration:6s;
 	animation-fill-mode:forwards;
 }
 
