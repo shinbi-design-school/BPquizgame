@@ -113,10 +113,10 @@ public class PointServlet extends JspServlet{
    			jsp = "/WEB-INF/jsp/last1.jsp";
    		}else if(operation != null && totalresult >= 55) {
    			//sc.getRequestDispatcher("/WEB-INF/jsp/last2.jsp");
-   			jsp = "/WEB-INF/jsp/last1.jsp";
+   			jsp = "/WEB-INF/jsp/last2.jsp";
    		}else if(operation != null && totalresult < 55) {
    			//sc.getRequestDispatcher("/WEB-INF/jsp/last3.jsp");
-   			jsp = "/WEB-INF/jsp/last1.jsp";
+   			jsp = "/WEB-INF/jsp/last3.jsp";
    		}
    		////////////////////////////////////////////////
 		

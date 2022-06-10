@@ -15,17 +15,9 @@
 %>
 
 <!DOCTYPE html>
+
 <html>
 
-     <!-- 背景画像アニメ用 -->
-      <!--<div id="container">
-        <div id="c-container">
-            <canvas id="c">Sorry.</canvas>
-        </div>
-        <div id="c2-container">
-            <canvas id="c2">Sorry.</canvas>
-        </div>
-    </div>-->
 
    <head>
       <jsp:include page="head.jsp" />
@@ -39,7 +31,25 @@
     <body>
     
 
-      <jsp:include page="header.jsp" />
+          <!-- 背景画像アニメ用 -->
+      <div id="container">
+        <div id="c-container">
+            <canvas id="c">Sorry.</canvas>
+        </div>
+        
+        
+         <jsp:include page="header.jsp" /><!-- 重要：表示したいアイテムは、 c1-containerとc2-containerの間にはさむこと　-->
+         
+         
+        
+        <div id="c2-container">
+            <canvas id="c2">Sorry.</canvas>
+        </div>
+    </div>
+     <!-- 背景画像アニメ用ここまで -->
+    
+     
+     
      
       <main>
       
@@ -57,7 +67,7 @@
       	
       	<div class="toppage">
          トップページ<br/><br/>
-         クイズカテゴリーを選択してください。<br/>
+         クイズカテゴリーを選択してください。<br/><br/>
 		<form action="${pageContext.request.contextPath}/QuizResult" method="GET" >
             <select class="select" name="genre">
   		
@@ -80,7 +90,7 @@
                         
                     -->  		
                           </select>
-  		<br/><br/>
+  		<br/><br/><br/>
   		
   		<div>
 		 ボタンをクリックして<br/>💣💣🔥QuizGameスタート❕🔥💣💣<br/><br/>
@@ -88,7 +98,7 @@
   		<input id="start" type="hidden" name="start" value="start">
   			</div>
 		</form>
-	</div>
+		</div>
 	
      
 
@@ -108,8 +118,8 @@
       </main>
       
       
-      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
-<script src="js/particleText.js"></script>
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+ <script src="js/particleText.js"></script>
 
 
 <script>
@@ -128,7 +138,7 @@ $("#particle").particleText({
 <script src='https://npmcdn.com/babel-core@5.8.38/browser.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js'></script>
 <script src="${pageContext.request.contextPath}/js/script-bg.js"></script>
-     
+    
      
    </body>
    <footer>

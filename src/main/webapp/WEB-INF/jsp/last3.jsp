@@ -29,6 +29,7 @@
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/last 5-8.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/last reset.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/last delya.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style5.css">
 
 </head>
 
@@ -62,4 +63,31 @@
   <script src=""></script>
   
 </body>
+
+<footer>
+<%--魔理沙、霊夢 --%>
+<div class="change_img8"><%--画像を切り替えるための処理。切り替え画像を<P>の中に記述 --%>
+  <img id="imglast3" class="korokoro8" src="${pageContext.request.contextPath}/css/魔理沙1last3.png" width="200" height="200">
+  <img id="imglast3" class="korokoro8" src="${pageContext.request.contextPath}/css/魔理沙2last3.png" width="200" height="200">
+  </div>
+  
+  <%-- <div class="balloon4"><!--吹き出し-->--%>
+  <%-- <a>タイムオーバーです。</a> --%>
+  <%--<a class="timer">しぬー。しぬー。</a>--%>
+<%-- </div> --%>
+  
+  <div class="change_img7"><%--画像を切り替えるための処理。切り替え画像を<P>の中に記述 --%>
+  <img id="imglast3" class="korokoro7" src="${pageContext.request.contextPath}/css/霊夢1last3.png" width="200" height="200">
+  <img id="imglast3" class="korokoro7" src="${pageContext.request.contextPath}/css/霊夢2last3.png" width="200" height="200">
+	</div>
+	
+
+<!--吹き出し-->
+<%-- <div class="balloon3" >
+  <a>たいむおーばーです。</a>  --%>
+  <%-- <a class="timer">爆発するー。</a>--%>
+  <%-- </div>--%>
+
+</footer>
+
 </html>

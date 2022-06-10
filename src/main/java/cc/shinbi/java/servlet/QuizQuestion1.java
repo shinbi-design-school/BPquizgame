@@ -204,12 +204,11 @@ public class QuizQuestion1 extends JspServlet{
 				    sc.getRequestDispatcher("/WEB-INF/jsp/correct.jsp").forward(request,  response);//上の行の処理が終わってからページを開くようにする必要があるので、この行は最後に持ってくる（次のページが情報を取れなくてエラーになる）
 
 		      }
-		      else if(in == in1){//正解だった場合の処理
+		      /*else if(in == in1){//正解だった場合の処理
 		      		
 		      		session.setAttribute("answertime", answertime);//時間情報をcorrect.jspに渡す。
 		      		
 		      		count++;//各質問の獲得得点を足していくための処理。
-		      		
 		      		session.setAttribute("count", count);
 		      		
 		      		System.out.println("！！！  正解です。得点10点を獲得しました！！！");
@@ -217,7 +216,7 @@ public class QuizQuestion1 extends JspServlet{
 		      		
 		      		//Thread.sleep(100);//answertimeをincorrect.jspが取り出すまでにもし必要であればsleepを入れる。
 		      		sc.getRequestDispatcher("/WEB-INF/jsp/correct.jsp").forward(request,  response);//上の行の処理が終わってからページを開くようにする必要があるので、この行は最後に持ってくる（次のページが情報を取れなくてエラーになる）
-		      }
+		      }*/
 		      else if(in != in1 && next == null) {//不正解だった場合の処理。
 		    	  
 		    	   	session.setAttribute("answertime", answertime);//時間情報をcorrect.jspに渡す。

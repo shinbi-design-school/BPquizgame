@@ -302,8 +302,8 @@ System.out.println("ジャンル毎ID：" + choices4);
 			    //	sc.getRequestDispatcher("/WEB-INF/jsp/last1.jsp").forward(request,  response);
 			    	
 					String disp = "/point";//この３行の処理を行うことで、以降の処理は"/point"=PointServletに渡される。
-				      RequestDispatcher dispatch = request.getRequestDispatcher(disp);
-				      dispatch.forward(request, response);
+				    RequestDispatcher dispatch = request.getRequestDispatcher(disp);
+				    dispatch.forward(request, response);
 					
 			    	
 			    }else if((over != null || next != null) && i == 5 && totalresult >= 55) {
@@ -315,8 +315,8 @@ System.out.println("ジャンル毎ID：" + choices4);
 			   // 	sc.getRequestDispatcher("/WEB-INF/jsp/last2.jsp").forward(request,  response);
 			    	
 			    	String disp = "/point";//この３行の処理を行うことで、以降の処理は"/point"=PointServletに渡される。
-				     RequestDispatcher dispatch = request.getRequestDispatcher(disp);
-				      dispatch.forward(request, response);
+				    RequestDispatcher dispatch = request.getRequestDispatcher(disp);
+				    dispatch.forward(request, response);
 				
 				     
 				     
@@ -328,9 +328,9 @@ System.out.println("ジャンル毎ID：" + choices4);
 			    	//Thread.sleep(300);//ページが開く前にデータ処理時間が必要?
 			   // 	sc.getRequestDispatcher("/WEB-INF/jsp/last3.jsp").forward(request,  response);
 			    	
-			   	String disp = "/point";//この３行の処理を行うことで、以降の処理は"/point"=PointServletに渡される。
-				      RequestDispatcher dispatch = request.getRequestDispatcher(disp);
-				      dispatch.forward(request, response);
+					String disp = "/point";//この３行の処理を行うことで、以降の処理は"/point"=PointServletに渡される。
+				    RequestDispatcher dispatch = request.getRequestDispatcher(disp);
+				    dispatch.forward(request, response);
 					
 				      
 			    }

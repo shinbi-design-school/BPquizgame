@@ -23,13 +23,13 @@
 		<p>〇スタート画面が表示された時点で、カウントダウンが始まります。</p>
 		
 <%--個人ランクとルーレットを表示させる　以下<% %>は仮置きです--%>
-<%
+<%--
 	int rank = (int) session.getAttribute("rank");			
 	int roulette = (int) session.getAttribute("roulette"); 
-%>
+--%>
 
 <div>
-<input type="button" value="Start" id="question" onClick="location.href='http://localhost:8080/BPquizgame/QuizQ1.jsp'">
+<input type="button" value="Start" id="question" onClick="http://localhost:8080/BPquizgame/QuizQ1.jsp'">
 </div>
 
 </body>
