@@ -24,5 +24,5 @@
 <%
     }
 %>
-         <a class="menuItem" href="logout">ログアウト</a>
+         <a class="menuItem" href="logout">ログアウト　</a>
 </div>

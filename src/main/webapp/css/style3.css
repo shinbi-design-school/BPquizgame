@@ -38,8 +38,6 @@ background-color: red;
 
 
 
-
-
 /*ボタンをふわっと入れるためのs処理==================================================*/
 
 .btn,
@@ -473,10 +471,10 @@ opacity: 0;
 
 .stamp1{
   position: fixed;
-  top:  43%;
-  left: 63% ;
+  top:  38%;
+  left: 65% ;
   background: url(correct.png)center / cover;
-  z-index: 0;
+  z-index: -2;
   display: block;
   width:500px;
   height: 500px;
@@ -489,7 +487,6 @@ opacity: 0;
 	color: white;
 	text-shadow: 1px 2px 3px #808080;
 	transition-delay: 1s;
-	z-index: 2;
 }
 
 .judge {
@@ -497,7 +494,7 @@ opacity: 0;
   	letter-spacing: 0.1em;
   	color: white;
   	text-shadow: 1px 2px 3px #191970;
-  	z-index: 2;
+  	z-index: 4;
 }
 /*correct画面==================================================*/
 
@@ -507,10 +504,10 @@ opacity: 0;
 
 .stamp2{
   position: fixed;
-  top: 43%;
-  left: 63%;
+  top: 40%;
+  left: 65%;
   background: url(incorrect.png)center / cover;
-  z-index: 0;
+  z-index: -2;/*個々の数値を-2以下にしないと文字に隠れてしまう*/
   display: block;
   width: 500px;
   height: 500px;
@@ -526,7 +523,6 @@ opacity: 0;
   	color: white;
   	text-shadow: 1px 2px 3px #191970;
   	transition-delay: 2s;
-  	z-index: 2;
 }
 
 
@@ -543,7 +539,6 @@ opacity: 0;
   	font-weight: bold;
   	color: white;
   	text-shadow: 1px 2px 3px #191970;
-  	z-index: 4;
 }
 
     /* CSSアニメーションの設定 */
@@ -579,14 +574,12 @@ opacity: 0;
 
 .TextTyping span {
   display: none;
-  z-index: 4;
 }
 
 /*文字列後ろの線の設定*/
 .TextTyping::after {
   content: "|";
   animation: typinganime .8s ease infinite;
-  z-index: 4;
 }
 
 @keyframes typinganime{

@@ -63,7 +63,11 @@ a {
     color:white;
 }
 
-<<<<<<< HEAD
+.select {
+	    padding: 5px 40px;
+    font-size: 15px;
+}
+
 /*
 =======
 .welcome{
@@ -84,10 +88,7 @@ a {
 	
 }
 
-.select {
-	    padding: 5px 40px;
-    font-size: 15px;
-}
+
 
 
 #login th,
@@ -332,14 +333,14 @@ li {
   top: 55%;
   left: 50%;
   transform: translate(-50%,-50%);
-  background-color: #000;
+  /*background-color: #000;*/
   text-align: center;
 }
 
 #login_form h1,form p {
   color: white;
   font-weight: 500;
-  font-size: 72px;
+  font-size: 50px;
 }
 
 #login_form p {
@@ -384,6 +385,9 @@ li {
 }
 
 #login_form input[type = "submit"]:hover {
+	
+  /*background-color: rgb(128, 0, 255);*/
+  /*border: 2px solid rgb(128, 0, 255);*/
   background-color: #2e00c5;
   border: 2px solid #2e00c5;
 }
@@ -412,6 +416,7 @@ li {
   border: 0;
   display: block;
   margin: 15px;
+  /*border: 2px solid rgb(128, 0, 255);*/
   border: 2px solid #2e00c5;
   padding: 15px 10px;
   width: 560px;
@@ -445,6 +450,8 @@ li {
 }
 
 #edit_form input[type = "submit"]:hover {
+  /*background-color:rgb(128, 0, 255);*/
+  /*border: 2px solid rgb(128, 0, 255);*/
   background-color: #2e00c5;
   border: 2px solid #2e00c5;
 }

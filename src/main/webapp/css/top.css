@@ -189,7 +189,7 @@ p{
  top:5px;
  right:5px;
  /*background-color:#f39c12;*/
- background-color:rgba(128, 0, 255, 1.0);
+ background-color:rgba(128, 0, 255, 0.7);
  z-index:-1;
  transition:transform .2s ease-in-out;
  }

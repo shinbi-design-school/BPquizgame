@@ -38,7 +38,7 @@
       <form id="login_form" name="login_form" method="post" action="login">
       <div class="login_form_top">
         <h1>LOGIN</h1>
-        <p>アカウント名、パスワードを入力してください。</p>
+        <p>アカウント名、パスワード<br/>を入力してください。</p>
       </div>
       <div class="login_form_btm">
         <input type="text" name="account" placeholder="アカウント名">
