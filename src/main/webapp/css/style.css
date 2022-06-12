@@ -63,10 +63,7 @@ a {
     color:white;
 }
 
-.select {
-	    padding: 5px 40px;
-    font-size: 15px;
-}
+
 
 /*
 =======
@@ -208,7 +205,7 @@ footer {
   border-top: 1px solid #3c6690;
   border-bottom: 1px solid #3c6690;
   box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
-  width: 25%;
+  /*width: 25%;*/
   padding: 10px 0;
 }
 
@@ -219,7 +216,7 @@ footer {
   border-bottom: 1px solid #a8b7c5;
   border-top:none;
   box-shadow: 0px -3px 5px 1px #eee inset;
-  width: 25%;
+  /*width: 25%;*/
   padding: 10px 0;
 }
 
@@ -245,7 +242,8 @@ footer {
 
 
 
-/*========= Boost 粒子化 ===============*/
+
+/*========= Boost タイトル粒子化 ===============*/
 /*タイトル粒子化用*/
 canvas {
     width: 100%;
@@ -285,7 +283,7 @@ a{
 
 
 
-/*背景アニメーション用*/
+/*背景：光の玉アニメーション用*/
 
 @import 'https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i';
 
@@ -328,23 +326,26 @@ li {
 
 #login_form {
   width: 400px;
-  padding: 40px 10px;
+  padding: 10px 10px;
   position: absolute;
   top: 55%;
   left: 50%;
   transform: translate(-50%,-50%);
   /*background-color: #000;*/
   text-align: center;
+  border-radius: 25px;
 }
 
 #login_form h1,form p {
   color: white;
   font-weight: 500;
   font-size: 50px;
+  background: rgba(0, 0, 0, 0.9);
 }
 
 #login_form p {
   font-size: 24px;
+  background: rgba(0, 0, 0, 0.9);
 }
 
 #login_form input[type = "text"],.pass {
@@ -360,11 +361,13 @@ li {
   transition: 0.25s;
   text-align: center;
   font-size: 22px;
+  color: white;
+  background-color: #000;
 }
 
 #login_form input[type = "text"]:focus,.pass:focus {
   width: 320px;
-  background-color: #f0f8ff;
+  background-color: #2e00c5;
 }
 
 #login_form input[type = "submit"]{
@@ -382,6 +385,7 @@ li {
   text-align: center;
   cursor: pointer;
   font-size: 18px;
+  background-color: #000;
 }
 
 #login_form input[type = "submit"]:hover {

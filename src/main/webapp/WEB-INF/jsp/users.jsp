@@ -38,10 +38,10 @@
          </div>
          <table id="tables">
             <tr>
-               <th>アカウント名</th>
-               <th>名前</th>
-               <th>権限</th>
-               <th>操作</th>
+               <th width="25%">アカウント名</th>
+               <th width="25%">名前</th>
+               <th width="25%">権限</th>
+               <th width="25%">操作</th>
             </tr>
 <%
    for(User user : users) {

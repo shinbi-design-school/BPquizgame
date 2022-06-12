@@ -37,8 +37,8 @@
 
        <table id="tables">
             <tr>
-               <th>質問内容</th>
-               <th>操作</th>
+               <th width="85%">質問内容</th>
+               <th width="15%">操作</th>
             </tr>
 <%
    for(Quiz quiz : quizs) {

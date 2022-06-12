@@ -27,10 +27,10 @@
        
        <table id="tables">
             <tr>
-               <th>順位</th>
-               <th>名前</th>
-               <th>得点</th>
-               <th>日付</th>
+               <th width="25%">順位</th>
+               <th width="25%">名前</th>
+               <th width="25%">得点</th>
+               <th width="25%">日付</th>
             </tr>
 <%
    for(Point point : points) {

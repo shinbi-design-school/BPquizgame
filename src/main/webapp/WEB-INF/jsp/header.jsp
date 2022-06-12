@@ -12,10 +12,10 @@
 
 <header>
 
-<!--タイトル粒子化r-->
-<div id="wrapper">
-<canvas id="particle"></canvas>
-<!--/wrapper--></div>
+	<!--タイトル粒子化-->
+	<div id="wrapper">
+		<canvas id="particle"></canvas>
+		<!--/wrapper--></div>
 
 
 <%
@@ -42,7 +42,7 @@
 
 
 
-
+<!--タイトル粒子化Js-->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
 <script src="js/particleText.js"></script>
 <script>
@@ -52,6 +52,7 @@ $("#particle").particleText({
 	speed: "middle", // slow, middle, high の3つから粒子が集まる速さを選択
 	});
 </script>
+
 </header>
 
 

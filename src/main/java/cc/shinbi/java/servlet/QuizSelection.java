@@ -69,10 +69,6 @@ public class QuizSelection extends DAO<Quiz> {
 	}
 
 		
-	
-	
-	
-	
 	//レコードの数を取得する処理
 			public int count() throws SQLException {
 				String sql = String.format(
@@ -94,12 +90,11 @@ public class QuizSelection extends DAO<Quiz> {
 				return count;
 	}
 			
-		/////砂岡さん修正////////////////////////////////////////////////////////////////
 			
-			//Genreからレコードを取得をする処理
-	
+		/////Genreからレコードを取得をする処理////////////////////////////////////////////////////////////////
+
 			@SuppressWarnings({ "rawtypes", "unchecked" })//ArrayListを作るので、この行が追加される
-			public Quiz findByGenre(String genre, HttpServletRequest request) throws SQLException {//QuizResultで設定したidをサーバーに渡し、46行のオーバーライドで値を取得し、再度入手して、要求先に送る。途中、AllayListを作成するので、”HttpServletRequest request”を追加
+			public Quiz findByGenre(String genre, HttpServletRequest request) throws SQLException {//QuizResultで設定したidをサーバーに渡し、52行のオーバーライドで値を取得し、再度入手して、要求先に送る。途中、AllayListを作成するので、”HttpServletRequest request”を追加
 				Quiz quiz = null;
 				ArrayList list3 = new ArrayList();//IDを収めるためのArrayListを作成
 
@@ -119,13 +114,10 @@ public class QuizSelection extends DAO<Quiz> {
 					quiz = this.createEntity(resultSet);//まずはIDごとにレコードを取得
 					int ida = quiz.getId();//その中からIDだけ取り出す。
 					list3.add(ida);	//その結果をArrayListに収める
-					
-
 				}
 				
 				HttpSession session = request.getSession();//各結果を都度IDの数だけ行うArraylistに収めて、セッションに送る。
 				session.setAttribute("list3", list3);
-				
 				
 				resultSet.close();
 				statement.close();
@@ -133,102 +125,7 @@ public class QuizSelection extends DAO<Quiz> {
 				return quiz;
 				
 			}
-			
-			
-
-
-	
-	
-	/*////砂岡さん修正///////////////////////////////////////////////////////////////*/
-	
-			
-			
-			
-/*////////////////////////////////////////////////////////////////////
-			
-//Genreからレコードを取得をする処理
-public Quiz findByGenre(String genre) throws SQLException {//QuizResultで設定したidをサーバーに渡し、46行のオーバーライドで値を取得し、再度入手して、要求先に送る
-Quiz quiz = null;
-
-String sql = String.format(
-"SELECT * FROM %s WHERE genre = ?",//指定したGenreのレコードを呼び出すためのSELECT文
-this.tableName
-);
-
-PreparedStatement statement = this.connection.prepareStatement(sql);//呼び出し方法の指定。Preparedなので次に条件を記載
-statement.setString(1, genre);//呼び出し内容の定義。ランダムに設定した値がidに代入される。
-
-ResultSet resultSet = statement.executeQuery();
-if(resultSet.next()) {
-//for(int i1=0; i1 <= genre.length(); i1++) {
-quiz =this.createEntity(resultSet);	
-//return quiz;
-
-}
-
-
-
-
-resultSet.close();
-statement.close();
-
-return quiz;
-}
-
-////////////////////////////////////////////////////////////////////*/
-}
-
-	
-
-
-	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	
-	/*
-
-	int count = (int)session.getAttribute("count");
-	int r = (int) (Math.floor( Math.random() * count ) + 1);//ランダムでクイズIDを設定するために、Math.randomで数値を求める。また最大数はレコード数=countにしておく
-	
-
-    public T findById(int id) throws SQLException {
-    T entity = null;
-
-    String sql = String.format(
-    "SELECT * FROM %s WHERE id = ?",
-    this.tableName
-);
-
-    PreparedStatement statement = this.connection.prepareStatement(sql);
-    statement.setInt(r, id);
-
-    ResultSet resultSet = statement.executeQuery();
-    if(resultSet.next()) {
-    	entity = this.createEntity(resultSet);
-}
-
-    resultSet.close();
-    statement.close();
-
-return entity;
-}
-
-
-	@Override
-	protected Quiz createEntity(ResultSet resultSet) throws SQLException {
-		// TODO 自動生成されたメソッド・スタブ
-		return null;
 	}
-	
-}
-*/
 
     
     

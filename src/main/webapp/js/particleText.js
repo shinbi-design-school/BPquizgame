@@ -1,3 +1,4 @@
+/*背景：光の玉用JS*/
 (function( $ ) {
   $.fn.particleText = function(options) {
 

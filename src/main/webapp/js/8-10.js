@@ -1,4 +1,4 @@
-// TextTypingというクラス名がついている子要素（span）を表示から非表示にする定義
+// TextTypingというクラス名がついている子要素（span）を表示から非表示にする定義//
 function TextTypingAnime() {
   $('.TextTyping').each(function () {
     var elemPos = $(this).offset().top - 50;

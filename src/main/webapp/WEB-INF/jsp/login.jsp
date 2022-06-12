@@ -35,29 +35,31 @@
       
       
       
-      <form id="login_form" name="login_form" method="post" action="login">
-      <div class="login_form_top">
-        <h1>LOGIN</h1>
-        <p>アカウント名、パスワード<br/>を入力してください。</p>
-      </div>
-      <div class="login_form_btm">
-        <input type="text" name="account" placeholder="アカウント名">
-        <input type="password" name="password" placeholder="パスワード" class="pass">
-        <input type="submit" name="botton" value="LOGIN">
-        <input type="submit" name="botton" formaction="newuser"value="新規登録">
-      </div>
-    </form>
+		<form id="login_form" name="login_form" method="post" action="login">
+     		 <div class="login_form_top">
+        		<h1>LOGIN</h1>
+       			<p>アカウント名、パスワード<br/>を入力してください。</p>
+      		</div>
+      		<div class="login_form_btm">
+        		<input type="text" name="account" placeholder="アカウント名">
+       			<input type="password" name="password" placeholder="パスワード" class="pass">
+        		<input type="submit" name="botton" value="LOGIN">
+        		<input type="submit" name="botton" formaction="newuser"value="新規登録">
+      		</div>
+    
       
       
       
 <%
     if(error != null) {
 %>
-            <br/><div id="error"><%= error %></div>
+            <div id="error"><%= error %></div>
 <%
     }
 %>
-</div>
+
+		</form>
+	</div>
 
 
 

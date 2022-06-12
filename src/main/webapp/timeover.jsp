@@ -24,7 +24,7 @@
 <a class="TextTyping">【解説】　<%= explanation %></a><br/><br/>
 <a>次に進む場合は、ボタンを押してください。</a><br/>
 <form action="${pageContext.request.contextPath}/QuizResult" method="get">
-	<button class="bt" name="over" value="over" style="font-size:20px;">次に進む</button>
+	<button  class="button" class="bt" name="over" value="over" style="font-size:20px;">次に進む</button>
 	</form>
 	</div>
 	<br/>
