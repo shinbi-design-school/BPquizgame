@@ -334,3 +334,23 @@ video {
   color: #000;
   text-shadow: none;
 }
+
+
+/*スタートページに戻るボタン装飾*/
+.button  {
+  font-size: 20px;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: white;
+  border: solid 2px #2e00c5;
+  border-radius: 7px;
+  transition: .4s;
+  cursor: pointer;
+  background: rgba(46, 0, 197, 0.3);
+}
+
+.button:hover {
+  background: #2e00c5;
+  color: #ffff00;
+}
