@@ -28,8 +28,7 @@ SHINBIデザインスクール　Java・Webプログラミング科３期(2021.1
 
 フロントエンド側は小田が中心となりチーム体制にて、設計と構築を行いました。
 
-
------※可能なら制作物のShortMovieかImageを張り付ける------
+![image](https://user-images.githubusercontent.com/96611193/173271451-839d3d01-b83c-46e2-82f5-c7c4eea03f16.png)
 
 
 ## こだわったポイント
@@ -62,4 +61,6 @@ SHINBIデザインスクール　Java・Webプログラミング科３期(2021.1
  
  
  ## QuizGameの機能
+ 
+ 
  
