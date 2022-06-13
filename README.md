@@ -26,7 +26,8 @@ SHINBIデザインスクール　Java・Webプログラミング科３期(2021.1
 
 フロントエンド側は小田が中心となりチーム体制にて、設計と構築を行いました。
 
-![image](https://user-images.githubusercontent.com/96611193/173287964-2e63260d-70be-42ea-a7cc-046a6ccdca99.png)
+![image](https://user-images.githubusercontent.com/96611193/173288323-d64c9249-f8f7-4895-9e25-26066efc2f14.png)
+
 
 
 
