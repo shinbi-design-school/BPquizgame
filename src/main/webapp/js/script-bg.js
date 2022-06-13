@@ -1,3 +1,4 @@
+/**/
 $(window).bind('load', function () {
     const raf = function (entry) {
         window.requestAnimationFrame(entry);
