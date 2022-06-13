@@ -19,7 +19,7 @@
       <jsp:include page="header.jsp" />
       
       <main>
-         <form id="edit_form" method="post" action="newuser">
+         <form id="edit_form" method="post" action="newuser" style="top: 60%;">
             <table id="edit_table">
                <tr>
                   <th>アカウント名</th>

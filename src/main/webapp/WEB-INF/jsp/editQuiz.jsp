@@ -29,7 +29,7 @@
       <title>クイズゲーム</title>
    </head>
    
-    <body>
+    <body onLoad="selectAnswer(<%= answer %>)">
       <jsp:include page="header.jsp" />
       <main>
          <form id="edit_form" method="post" action="postquiz">
@@ -61,11 +61,12 @@
                     <th>答え</th>
                     <td>
                     <div class="cp_ipselect cp_sl01">
-                       <select  id="answerselect" name="answer">
-                          <option value="1">選択肢1</option>
-                          <option value="2">選択肢2</option>
-                          <option value="3">選択肢3</option>
-                          <option value="4">選択肢4</option>
+                       <select id="answerselect" name="answer">
+                          <option value="1" id="answer1">選択肢1</option>
+                          <option value="2" id="answer2">選択肢2</option>
+                          <option value="3" id="answer3">選択肢3</option>
+                          <option value="4" id="answer4">選択肢4</option>
+
                        </select>
                     </div>
                 </tr>

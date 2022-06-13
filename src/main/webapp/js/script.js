@@ -43,3 +43,16 @@ function editQuiz(id) {
 	$('#quiz_id_input').val(id);
 	$('#quiz_form').submit();
 }
+
+//editUser.jspで答えになる選択肢を取得して<select>の初期値として選ぶ処理
+function selectAnswer (answer) {
+	if(answer == 1) {
+	   	$('#answerselect').val('1');
+  	}else if(answer == 2){
+ 		$('#answerselect').val('2');
+  	}else if(answer == 3){
+  		$('#answerselect').val('3');
+  	}else if(answer == 4){
+  		$('#answerselect').val('4');
+  	}
+}

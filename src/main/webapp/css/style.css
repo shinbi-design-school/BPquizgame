@@ -63,61 +63,6 @@ a {
     color:white;
 }
 
-
-
-/*
-=======
-.welcome{
-	 width: 90%;
-    text-align: right;
-    color:white;
-	z-index: 2；
-}
-
->>>>>>> branch 'master' of git@github.com:shinbi-design-school/BPquizgame.git
-.login{
-	  position: fixed;
-  top:  40%;
-  left: 18% ;
-  z-index: 2;
-  color: white;
-  text-align: center;
-	
-}
-
-
-
-
-#login th,
-#login td {
-    padding: 5px
-}
-
-
-
-input {
-    border: 1px solid lightgray;
-    border-radius: 3px;
-    padding: 3px;
-    font-size: 12px;
-     z-index: 2
-}
-
-
-#submit {
-    margin: 5px;
-    padding: 5px 20px;
-    color: white;
-    font-weight: bold;
-    background-color: #33FF99;
-}
-
-
-#submit:hover {
-	opacity: 0.5;
-}
-*/
-
 footer {
     width: 100%;
     /*background-color: #99FF99;*/
@@ -152,31 +97,6 @@ footer {
 	padding: 50px 30px;
 }
 
-/*前のテーブル装飾
-#users {
-	margin: 0 auto;
-	border: #339933 1px solid;
-	border-collapse: collapse;
-}
-
-#users tr:nth-child(odd) {
-	background-color: #CCFFCC;
-}
-
-#users tr:nth-child(even) {
-	background-color: white;
-}
-
-#users th,
-#users td {
-	padding: 5px 10px;
-}
-
-#users th {
-	background-color: #339933;
-	color: white;
-}
-*/
 
 /*========= 一覧テーブル ===============*/
 #tables {

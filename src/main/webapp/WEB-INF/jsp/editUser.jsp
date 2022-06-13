@@ -82,6 +82,6 @@
    }
 %>
       </main>
-      <jsp:include page="footer.jsp" />
+     <%-- <jsp:include page="footer.jsp" /> --%>
    </body>
 </html>
