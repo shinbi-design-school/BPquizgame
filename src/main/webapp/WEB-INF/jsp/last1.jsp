@@ -65,11 +65,11 @@ int rank = (int) request.getAttribute("rank");
 </body>
 
 <footer>
-<!--  
+  
 <%--魔理沙、霊夢 --%>
 <div class="change_img8"><%--画像を切り替えるための処理。切り替え画像を<P>の中に記述 --%>
-  <img id="img2" class="purupuru8" src="${pageContext.request.contextPath}/css/魔理沙1last1.png" width="200" height="200">
-  <img id="img2" class="purupuru8" src="${pageContext.request.contextPath}/css/魔理沙2last1.png" width="200" height="200">
+  <img id="img2" class="purupuru8" src="${pageContext.request.contextPath}/css/女うかれる.png" width="200" height="200">
+  <img id="img2" class="purupuru8" src="${pageContext.request.contextPath}/css/女うかれる.png" width="200" height="200">
   </div>
   
   <%-- <div class="balloon4"><!--吹き出し-->--%>
@@ -78,10 +78,10 @@ int rank = (int) request.getAttribute("rank");
 <%-- </div> --%>
   
   <div class="change_img7"><%--画像を切り替えるための処理。切り替え画像を<P>の中に記述 --%>
-  <img id="img2" class="purupuru7" src="${pageContext.request.contextPath}/css/霊夢1last1.png" width="200" height="200">
-  <img id="img2" class="purupuru7"" src="${pageContext.request.contextPath}/css/霊夢2last1.png" width="200" height="200">
+  <img id="img2" class="purupuru7" src="${pageContext.request.contextPath}/css/男うかれる.png" width="200" height="200">
+  <img id="img2" class="purupuru7"" src="${pageContext.request.contextPath}/css/男うかれる.png" width="200" height="200">
 	</div>
--->
+
 
 <!--吹き出し-->
 <%-- <div class="balloon3" >

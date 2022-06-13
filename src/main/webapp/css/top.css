@@ -153,8 +153,8 @@ p{
   /*background: rgba(128, 0, 255, 0.3); */
   color: #fff;
   position: fixed;
-  top: 216px; 
-  left: 68%; 
+  top: 27%; 
+  left: 67%; 
   box-shadow: 0 0 1px 1px #808080 inset;
   border-radius: 17px
 }

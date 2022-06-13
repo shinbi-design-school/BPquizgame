@@ -49,19 +49,19 @@
 	</body>
 
 	<footer>
- <!--
+ 
 		<%--魔理沙、霊夢 --%>
 		<div class="change_img6"><%--画像を切り替えるための処理。切り替え画像を<P>の中に記述 --%>
-  			<img id="img6" class="purupuru6" src="${pageContext.request.contextPath}/css/魔理沙correct1.png" width="200" height="200">
-  			<img id="img6" class="purupuru6" src="${pageContext.request.contextPath}/css/魔理沙correct2.png" width="200" height="200">
+  			<img id="img6" class="purupuru6" src="${pageContext.request.contextPath}/css/女キリッ.png" width="200" height="200">
+  			<img id="img6" class="purupuru6" src="${pageContext.request.contextPath}/css/女キリッ.png" width="200" height="200">
   		</div>
   
   
   		<div class="change_img5"><%--画像を切り替えるための処理。切り替え画像を<P>の中に記述 --%>
-  			<img id="img5" class="purupuru5" src="${pageContext.request.contextPath}/css/霊夢correct1.png" width="200" height="200">
-  			<img id="img5" class="purupuru5" src="${pageContext.request.contextPath}/css/霊夢correct2.png" width="200" height="200">
+  			<img id="img5" class="purupuru5" src="${pageContext.request.contextPath}/css/男キリッ.png" width="200" height="200">
+  			<img id="img5" class="purupuru5" src="${pageContext.request.contextPath}/css/男キリッ.png" width="200" height="200">
 		</div>
--->
+
 	
 	<%-- <section>
 		<!--吹き出し-->

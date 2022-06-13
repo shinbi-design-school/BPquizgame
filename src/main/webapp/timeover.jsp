@@ -47,11 +47,11 @@
 	</body>
 
 	<footer>
-<!--
+
 <%--魔理沙、霊夢 --%>
 <div class="change_img2"><%--画像を切り替えるための処理。切り替え画像を<P>の中に記述 --%>
-  <img id="img2" class="puyon2" src="${pageContext.request.contextPath}/css/魔理沙timeover1.png" width="200" height="200">
-  <img id="img2" class="puyon2" src="${pageContext.request.contextPath}/css/魔理沙timeover2.png" width="200" height="200">
+  <img id="img2" class="puyon2" src="${pageContext.request.contextPath}/css/女ぬける.png" width="200" height="200">
+  <img id="img2" class="puyon2" src="${pageContext.request.contextPath}/css/女ぬける.png" width="200" height="200">
   </div>
   
   <%-- <div class="balloon4"><!--吹き出し-->--%>
@@ -60,10 +60,10 @@
 <%-- </div> --%>
   
   <div class="change_img1"><%--画像を切り替えるための処理。切り替え画像を<P>の中に記述 --%>
-  <img id="img2" class="puyon1" src="${pageContext.request.contextPath}/css/霊夢timeover1.png" width="200" height="200">
-  <img id="img2" class="puyon1" src="${pageContext.request.contextPath}/css/霊夢timeover2.png" width="200" height="200">
+  <img id="img2" class="puyon1" src="${pageContext.request.contextPath}/css/男ぬける.png" width="200" height="200">
+  <img id="img2" class="puyon1" src="${pageContext.request.contextPath}/css/男ぬける.png" width="200" height="200">
 	</div>
--->
+
 
 <!--吹き出し-->
 <%-- <div class="balloon3" >
