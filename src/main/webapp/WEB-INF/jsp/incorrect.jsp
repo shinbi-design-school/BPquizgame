@@ -53,6 +53,7 @@
 	</body>
 
 	<footer>
+<!--  
 		<%--魔理沙、霊夢 --%>
 		<div class="change_img4"><%--画像を切り替えるための処理。切り替え画像を<P>の中に記述 --%>
   			<img id="img4" class="korokoro4" src="${pageContext.request.contextPath}/css/魔理沙incorrect1.png" width="200" height="200">
@@ -63,7 +64,7 @@
   			<img id="img3" class="korokoro3" src="${pageContext.request.contextPath}/css/霊夢incorrect1.png" width="200" height="200">
 			<img id="img3" class="korokoro3" src="${pageContext.request.contextPath}/css/霊夢incorrect2.png" width="200" height="200">
 		</div>
-	
+-->
 	<%-- <section>
 		<!--吹き出し-->
 		<div class="balloon5" >

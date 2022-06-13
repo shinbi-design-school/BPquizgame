@@ -66,14 +66,14 @@
 <br/>
 <br/>
 			<a href="${pageContext.request.contextPath}/top">戻る</a><br>
-		
+<!--
 			<%--魔理沙、霊夢 --%>
 			<p class="change_img2"><%--画像を切り替えるための処理。切り替え画像を<P>の中に記述 --%>
   				<img id="img2" class="poyooon2" src="${pageContext.request.contextPath}/css/魔理沙.png" width="200" height="200">
   				<img id="img2" class="poyooon2" src="${pageContext.request.contextPath}/css/魔理沙2.png" width="200" height="200">
   			</p>
   
-		<div id="hideMe" class="timer balloon1"><!--吹き出し-->
+		<div id="hideMe" class="timer balloon1"><%--吹き出し--%>
 			<p id="hideMe" class="timer">がんばれーがんばれー</p>
   			<%--<p class="timer">しぬー。しぬー。</p>--%>
 		</div>
@@ -84,13 +84,13 @@
 			</p>
 	
 	<section>
-		<!--吹き出し-->
+		<%--吹き出し--%>
 		<div id="hideMe" class="timer balloon2" >
  			 <p id="hideMe" class="timer"><span id="Timer"></span>秒しかないよ！急げー</p>
   			<%-- <p class="timer">爆発するー。</p>--%>
 		</div>
 	</section>
-
+-->
 	</body>
 
 
@@ -141,7 +141,7 @@
  			const countUp = () => {
    				console.log(count--);<%--カウントダウンなので、"--"を記入。カウントアップの時は"++"を記入--%>
    				document.querySelector('#timer').textContent=count;<%--結果を表示させるための記述--%>
-   				document.querySelector('#Timer').textContent=count;<%--結果を表示させるための記述--%>
+   				<%--document.querySelector('#Timer').textContent=count;<%--吹き出しに結果を表示させるための記述--%>
    				const timeoutId = setTimeout(countUp, 1000);<%--カウントを表示させるための記述。カウントダウン設定だが、カウントをUP(表示)する意味で"countUp"を記載--%>
    			if(count <= 0){　
      			clearTimeout(timeoutId);<%--timeoutIdをclearTimeoutで指定している--%>
