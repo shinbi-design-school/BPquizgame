@@ -99,9 +99,9 @@ public class QuizQuestion1 extends JspServlet{
 
 			      int no = i+1;//問題No,を生じさせるための処理+1を加えることで、問題文と一致させる。
 		         
-		      if(answertime >= 10000) {//10秒以上は無効にしたいのでこの処理を追加。
+		      if(answertime >= 11500) {//10秒以上は無効にしたいのでこの処理を追加。
 		    	  
-		    	  	sc.getRequestDispatcher("/WEB-INF/jsp/timeover.jsp").forward(request,  response);
+		    	  	sc.getRequestDispatcher("/timeover.jsp").forward(request,  response);
 		    	  
 		    	  	System.out.println("時間切れです");
 		      }
@@ -123,6 +123,21 @@ public class QuizQuestion1 extends JspServlet{
 				    
 				    sc.getRequestDispatcher("/WEB-INF/jsp/correct.jsp").forward(request,  response);//上の行の処理が終わってからページを開くようにする必要があるので、この行は最後に持ってくる（次のページが情報を取れなくてエラーになる）
 		    	  		
+		      }
+		      else if(in == in1){//正解だった場合の処理。ページが切り替わるまでのタイムラグがあるので、その処理を追加。１０秒以上でも正解得点は追加するがボーナスはなしの設定。
+		    	  answertime = 10000;
+		    	  tokuten = 0;
+		    	  
+	      		  session.setAttribute("answertime", answertime);//時間情報をcorrect.jspに渡す。
+	      		  session.setAttribute("tokuten", tokuten);//得点情報をcorrect.jspに渡す。
+	      		
+	      		  count++;//各質問の獲得得点を足していくための処理。
+	      		  session.setAttribute("count", count);
+	      		
+	      		  System.out.println("！！！  正解です。得点10点を獲得しました！！！");
+	      		  System.out.println("問題" + no + "の回答までの時間：" + answertime/1000 + "sec");
+	      		
+	      		  sc.getRequestDispatcher("/WEB-INF/jsp/correct.jsp").forward(request,  response);//上の行の処理が終わってからページを開くようにする必要があるので、この行は最後に持ってくる（次のページが情報を取れなくてエラーになる）
 		      }
 		      else if(in != in1 && next == null) {//不正解だった場合の処理。
 		    	  
