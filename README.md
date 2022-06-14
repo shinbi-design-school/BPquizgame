@@ -3,7 +3,7 @@
 
 製作者氏名　小田貴正　砂岡祐太　坪井雅也　大島之敬
 
-使用言語 Java JavaScript HTML　css
+使用言語 Java JavaScript HTML　CSS
 
 開発環境 Eclipse MySQL Apache
 
