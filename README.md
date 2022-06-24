@@ -75,6 +75,9 @@ SHINBIデザインスクール　Java・Webプログラミング科３期(2021.1
 ・出題問題５問に解答されると、そのクイズ回にての得点と貴方のランキングが表示されます。
 
 　それでは、お楽しみください♬
-   https://shinbi-3rd.com/quizgame/top 
+  
+  https://shinbi-3rd.com/quizgame/top 
+  
    ログインアカウント：guest
+   
    ログインパスワード：VXxDSmtmKeXH
